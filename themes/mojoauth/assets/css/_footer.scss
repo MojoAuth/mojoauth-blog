@@ -1,0 +1,80 @@
+.footer {
+  padding: 48px 0;
+  border-top: 1px solid $hairline;
+  section {
+    & > div {
+      @extend %space-between;
+      @media (max-width: 992px) {
+        flex-direction: column;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        li {
+          a {
+            padding: 0 16px;
+            transition: 0.2s ease-in-out;
+            @media (max-width: 556px) {
+              padding: 0 12px;
+            }
+            @media (max-width: 400px) {
+              padding: 0 12px;
+            }
+            svg {
+              fill: $black;
+              transition: 0.2s ease-in-out;
+            }
+            &:hover {
+              color: $black;
+              svg {
+                fill: $primary;
+              }
+            }
+          }
+        }
+        &.links {
+          @media (max-width: 992px) {
+            order: 2;
+            padding: 26px 0;
+          }
+          @media (max-width: 400px) {
+            flex-direction: column;
+            align-items: center;
+          }
+          li {
+            @media (max-width: 400px) {
+              padding: 12px 0;
+            }
+            &:not(:last-child) {
+              a {
+                @media (min-width: 400px) {
+                  border-right: 1px solid $bodyText;
+                }
+              }
+            }
+          }
+        }
+        &.social-links {
+          @media (max-width: 992px) {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+  p {
+    margin: 0;
+    @media (max-width: 992px) {
+      order: 3;
+      text-align: center;
+    }
+  }
+  a {
+    color: $primary;
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+}
