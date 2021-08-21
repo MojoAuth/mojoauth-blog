@@ -50,7 +50,7 @@
               </p>
               <div class="bio">By {{.Params.author}} - {{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
               <div class="hero-image border-radius-md">
-                <img src="/assets/images/{{.Params.coverimage}}" />
+                <img src="/assets/images/{{.Params.coverimage}}" loading="lazy" alt="{{.Title}}"/>
               </div>
               <hr />
               {{.Content}}

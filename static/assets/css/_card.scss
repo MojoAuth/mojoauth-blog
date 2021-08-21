@@ -23,6 +23,9 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+    .title {
+      min-height: 67.2px;
+    }
   }
   .blog-link {
     &:before {

@@ -34,7 +34,7 @@
                {{ range .Pages }}
                <div class="card border-radius-sm border-muted">
                     <div class="image">
-                      <img src="/assets/images/{{.Params.coverimage}}" />
+                      <img src="/assets/images/{{.Params.coverimage}}"  loading="lazy" alt="{{.Title}}"/>
                     </div>
                     <div class="description">
                       <div class="tag">

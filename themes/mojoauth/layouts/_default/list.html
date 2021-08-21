@@ -30,14 +30,16 @@
         <section class="hero pinned-item py-72">
           <div class="grid-65-35">
             <div class="hero-image border-radius-md">
-              <img src="/assets/images/{{.Params.coverimage}}" />
+              <a href="{{.Permalink}}">
+                <img src="/assets/images/{{.Params.coverimage}}" loading="lazy" alt="{{.Title}}"/>
+              </a>
             </div>
             <div class="text">
               <div class="tag">
                 {{range .Params.tags}}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a> {{end}}
               </div>
               <h1 class="title">
-                {{.Title}}
+                <a href="{{.Permalink}}">{{.Title}}</a>
               </h1>
               <p>
                 {{.Params.description}}
@@ -45,7 +47,6 @@
               <div class="bio">By {{.Params.author}} - {{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
             </div>
           </div>
-          <a href="{{.Permalink}}" class="blog-link"></a>
         </section>
         {{ end }}
         <!--hero pinned section-->
@@ -55,7 +56,7 @@
                {{ range after 1 .Pages }}
                <div class="card border-radius-sm border-muted">
                     <div class="image">
-                      <img src="/assets/images/{{.Params.coverimage}}" />
+                      <img src="/assets/images/{{.Params.coverimage}}" loading="lazy" alt="{{.Title}}"/>
                     </div>
                     <div class="description">
                       <div class="tag">

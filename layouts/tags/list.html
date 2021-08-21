@@ -22,116 +22,49 @@
   <body>
     <!--main section-->
     <div class="main">
-     {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
+      <!--header section-->
+      {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
+      <!--header section-->
       <!--content section-->
       <main class="content">
-        <section class="tag-title py-72">
-          <h1>Found {{ len .Pages }} posts with {{ .Params.title }}.</h1>
-        </section>
-        <!--blog listing-->
-        <section class="blog-listing">
-          <div class="grid-33">
-               {{ range .Pages }}
-               <div class="card border-radius-sm border-muted">
-                    <div class="image">
-                      <img src="/assets/images/{{.Params.coverimage}}" />
-                    </div>
-                    <div class="description">
-                      <div class="tag">
-                         {{range .Params.tags}}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a> {{end}}
-                      </div>
-                      <h2 class="title">
-                         {{.Title}}
-                      </h2>
-                      <p>
-                        {{.Params.description}}
-                      </p>
-                      <div class="bio">By {{.Params.author}} - {{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-                    </div>
-                    <!--blog link add here-->
-                    <a href="{{.Permalink}}" class="blog-link"></a>
-               </div>
-               {{ end }}
-          </div>
-        </section>
-        <!--blog listing-->
-        <!--pagination-->
-        <!--
-        <section class="py-72">
+        <!--hero pinned section-->
+        <section class="hero pinned-item py-72">
           <div>
-            <ul class="pagination">
-              <li>
-                <a href="#" class="prew disabled">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-chevron-left"
-                  >
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                  </svg>
-                </a>
-              </li>
-              <li class="link">
-                <a href="#">1</a>
-              </li>
-              <li class="link">
-                <a href="#" class="active">2</a>
-              </li>
-              <li class="link">
-                <a href="#">3</a>
-              </li>
-              <li class="link">
-                <a href="#">4</a>
-              </li>
-              <li class="link">
-                <a href="#">5</a>
-              </li>
-              <li class="link">
-                <a href="#">6</a>
-              </li>
-              <li>
-                <a href="#" class="next enable">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-chevron-right"
-                  >
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            <div class="text">
+              <h1 class="title">Found {{ len .Pages }} posts with tag "{{ .Params.title }}"</h1>
+            </div>
           </div>
         </section>
-          -->
-        <!--pagination-->
-        <!--CTA section-->
-        <section class="cta text-center mb-72">
-          <div class="bg-light py-72 border-radius-md">
-            <h2>Ready to get started?</h2>
-            <p>
-              Right time to use passwordless for your Web, Mobile, TV, Wearable
-              or any Smart and IoT Apps.
-            </p>
-            <a href="https://mojoauth.com/signin" target="_blank" class="btn btn-primary">Signup for free</a>
+        <!--hero pinned section-->
+        <!--blog listing-->
+        <section class="blog-listing mb-72">
+          <div class="grid-33">
+            {{ range .Pages }}
+            <div class="card border-radius-sm border-muted">
+              <div class="image">
+                <img src="/assets/images/{{.Params.coverimage}}"  loading="lazy" alt="{{.Title}}"/>
+              </div>
+              <div class="description">
+                <div class="tag">
+                  {{range .Params.tags}}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a> {{end}}
+                </div>
+                <h2 class="title">
+                  {{.Title}}
+                </h2>
+                <p>
+                  {{.Params.description}}
+                </p>
+                <div class="bio">By {{.Params.author}} - {{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+              </div>
+              <!--blog link add here-->
+              <a href="{{.Permalink}}" class="blog-link"></a>
+            </div>
+            {{ end }}
           </div>
         </section>
-        <!--CTA section-->
+        <!--blog listing-->
       </main>
+      <!--content section-->
       {{ partial "footer" . }}
     </div>
     <!--main section-->
