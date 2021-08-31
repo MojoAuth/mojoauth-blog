@@ -66,6 +66,9 @@ p {
     border-radius: 8px;
   }
 }
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 section {
   & > div {
     max-width: 1248px;
@@ -135,6 +138,10 @@ section {
   margin-top: auto;
   color: $grayLight;
   font-size: 15px;
+  a {
+    color: $grayLight;
+    font-style: italic;
+  }
 }
 .pagination {
   display: flex;
@@ -198,7 +205,7 @@ section {
 }
 .cta {
   .bg-light {
-    border-radius: 8px;
+    border-radius: 12px;
     @media (max-width: 1024px) {
       margin: 0 24px;
     }

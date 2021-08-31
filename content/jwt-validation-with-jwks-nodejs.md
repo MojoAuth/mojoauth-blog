@@ -1,6 +1,6 @@
 ---
 title: "JWT validation with JWKs in Node.js"
-date: 2021-07-20T14:41:23+05:30
+date: 2021-09-20T14:41:23+05:30
 coverImage: "jwk_validation_node.jpg"
 author: "Mehul Sharma"
 tags: ["MojoAuth"]

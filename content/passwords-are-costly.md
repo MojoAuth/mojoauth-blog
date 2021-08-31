@@ -1,6 +1,6 @@
 ---
 title: "How Passwords are costly"
-date: 2021-07-20T14:41:23+05:30
+date: 2021-08-18T14:41:23+05:30
 coverImage: "passwords_are_costly.jpg"
 author: "Mehul Sharma"
 tags: ["Passwordless"]

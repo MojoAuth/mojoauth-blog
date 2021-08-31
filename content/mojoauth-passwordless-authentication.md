@@ -1,6 +1,6 @@
 ---
 title: "MojoAuth - Passwordless Authentication Solution"
-date: 2021-07-20T14:41:23+05:30
+date: 2021-08-25T14:41:23+05:30
 coverImage: "mojoauth-passwordless-authentication.png"
 author: "Shrey Gupta"
 tags: ["Article"]

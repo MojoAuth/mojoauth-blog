@@ -25,9 +25,9 @@
       margin-top: 56px;
     }
     hr {
+      margin: 48px 0;
       border-top: 0;
       border-color: $hairline;
-      margin: 48px 0;
     }
     p {
       margin-bottom: 32px;
@@ -65,8 +65,10 @@
   }
 }
 .detail-page-v1 {
+  .detail-page-header {
+    margin-bottom: 56px;
+  }
   .hero-image {
-    margin-top: 56px;
     img {
       width: 100%;
       max-height: 450px;
@@ -77,7 +79,7 @@
     }
   }
   .description {
-    .grid-20-60-20 {
+    .grid-70-30 {
       overflow: visible;
     }
     position: relative;
@@ -87,8 +89,8 @@
     }
     hr {
       border-top: 0;
-      border-color: $hairline;
       margin: 48px 0;
+      border-color: $hairline;
     }
     p {
       margin-bottom: 32px;
@@ -133,41 +135,39 @@
       }
     }
     .sidebar {
-      @media (min-width: 1025px) {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 216px;
+      &.sticky {
+        text-align: center;
+        padding: 48px 24px;
+        background-color: #f2f4f8;
+        height: fit-content;
+        border-radius: 12px;
+        @media (min-width: 1025px) {
+          position: -webkit-sticky;
+          position: sticky;
+          top: 30px;
+        }
       }
-      padding: 24px;
-      border: 1px solid $hairline;
-      border-radius: 4px;
-      height: fit-content;
+      svg {
+        width: 56px;
+        margin-bottom: 32px;
+      }
       p {
         font-size: 15px;
       }
       h3 {
         margin-top: 0;
+        margin-bottom: 32px;
+        line-height: 1.7;
         span {
           font-weight: normal;
         }
       }
       .btn-group {
         display: flex;
-        @media (min-width: 1025px) {
-          flex-direction: column;
-        }
-        @media (max-width: 480px) {
-          flex-direction: column;
-        }
-        align-items: center;
+        justify-content: center;
         width: auto;
         .btn-primary {
-          @media (min-width: 1025px) {
-            margin-bottom: 16px;
-          }
-          @media (max-width: 480px) {
-            margin-bottom: 16px;
-          }
+          margin-bottom: 0;
         }
         .btn-secondary {
           @media (max-width: 1024px) {
@@ -178,27 +178,69 @@
     }
   }
   .blog-listing {
+    padding-top: 72px;
+    h2 {
+      margin: 0 0 24px;
+    }
     .card {
-      img {
-        object-fit: cover;
-        width: 100%;
-        max-height: 145px;
-        min-height: 145px;
-      }
-      .description {
-        padding: 16px;
-      }
       h2 {
+        margin: 0;
+      }
+    }
+  }
+  // .blog-listing {
+  //   .card {
+  //     img {
+  //       object-fit: cover;
+  //       width: 100%;
+  //       max-height: 145px;
+  //       min-height: 145px;
+  //     }
+  //     .description {
+  //       padding: 16px;
+  //     }
+  //     h2 {
+  //       margin-top: 0;
+  //       margin-bottom: 0;
+  //       font-size: 16px;
+  //       line-height: 24px;
+  //     }
+  //     .tag {
+  //       a {
+  //         font-size: 13px;
+  //       }
+  //     }
+  //   }
+  // }
+}
+// auther details
+.auther-detail {
+  border-radius: 12px;
+  margin: 48px 0 0;
+  display: flex;
+  background-color: #f2f4f8;
+  padding: 24px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  .img {
+    margin-right: 24px;
+    img {
+      border-radius: 100px;
+    }
+  }
+  .description {
+    color: $black;
+    h2 {
+      @media (min-width: 768px) {
         margin-top: 0;
-        margin-bottom: 0;
-        font-size: 16px;
-        line-height: 24px;
       }
-      .tag {
-        a {
-          font-size: 13px;
-        }
-      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+    a {
+      text-decoration: none !important;
     }
   }
 }

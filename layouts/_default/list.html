@@ -25,16 +25,38 @@
      {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
       <!--content section-->
       <main class="content">
+        <!--hero pinned section-->
+        {{ range first 1 .Pages }}
         <section class="hero pinned-item py-72">
-          This is the ittle
+          <div class="grid-65-35">
+            <div class="hero-image border-radius-md">
+              <a href="{{.Permalink}}">
+                <img src="/assets/images/{{.Params.coverimage}}" loading="lazy" alt="{{.Title}}"/>
+              </a>
+            </div>
+            <div class="text">
+              <div class="tag">
+                {{range .Params.tags}}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a> {{end}}
+              </div>
+              <h1 class="title">
+                <a href="{{.Permalink}}">{{.Title}}</a>
+              </h1>
+              <p>
+                {{.Params.description}}
+              </p>
+              <div class="bio"> <a href='{{ "/author/" }}{{ .Params.author | urlize }}'>{{.Params.author}}</a> - {{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+            </div>
+          </div>
         </section>
+        {{ end }}
+        <!--hero pinned section-->
         <!--blog listing-->
         <section class="blog-listing">
           <div class="grid-33">
-               {{ range .Pages }}
+               {{ range after 1 .Pages }}
                <div class="card border-radius-sm border-muted">
                     <div class="image">
-                      <img src="/assets/images/{{.Params.coverimage}}"  loading="lazy" alt="{{.Title}}"/>
+                      <img src="/assets/images/{{.Params.coverimage}}" loading="lazy" alt="{{.Title}}"/>
                     </div>
                     <div class="description">
                       <div class="tag">
@@ -46,7 +68,7 @@
                       <p>
                         {{.Params.description}}
                       </p>
-                      <div class="bio">By {{.Params.author}} - {{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+                      <div class="bio"> <a href='{{ "/author/" }}{{ .Params.author | urlize }}'>{{ .Params.author }}</a> - {{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
                     </div>
                     <!--blog link add here-->
                     <a href="{{.Permalink}}" class="blog-link"></a>
