@@ -16,7 +16,7 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="/assets/css/base.min.css"
+      href='{{ "/assets/css/" | relLangURL  }}base.min.css'
     />
   </head>
 
@@ -24,7 +24,7 @@
     rel="stylesheet"
     type="text/css"
     media="screen"
-    href="/assets/css/highlight.css"
+    href='{{ "/assets/css/" | relLangURL  }}highlight.css'
   />
 </head>
   <body>
@@ -52,7 +52,7 @@
             <div class="right sidebar">&nbsp;</div>
             <div class="middle text">
               <div class="hero-image border-radius-md">
-                <img src="/assets/images/{{.Params.coverimage}}" loading="lazy" alt="{{.Title}}"/>
+                <img src='{{ "/assets/images/" | relLangURL  }}{{.Params.coverimage}}' loading="lazy" alt="{{.Title}}"/>
               </div>
               <hr />
               {{.Content}}
@@ -156,6 +156,6 @@
       {{ partial "footer" . }}
     </div>
     <!--main section-->
-	<script src="/assets/js/copy_code.js"></script>
+	<script src='{{ "/assets/js/" | relLangURL  }}copy_code.js'></script>
   </body>
 </html>

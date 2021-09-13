@@ -9,13 +9,13 @@
     </label>
   </div>
   <div class="logo-mobile">
-    <a href="https://mojoauth.com/blog" class="logo">
-      <img src="/assets/images/logo.svg" />
+    <a href="{{ .Site.BaseURL  }}" class="logo">
+      <img src='{{ "/assets/images/" | relLangURL  }}logo.svg' />
     </a>
   </div>
   <nav>
-    <a href="https://mojoauth.com" class="logo">
-      <img src="/assets/images/logo.svg" />
+    <a href="{{ .Site.BaseURL  }}" class="logo">
+      <img src='{{ "/assets/images/" | relLangURL  }}logo.svg' />
     </a>
     <div class="nav-right">
       <ul class="nav-links">

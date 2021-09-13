@@ -1,6 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "https://mojoauth.com/blog"
 languageCode = "en-us"
 title = "MojoAuth"
+publishDir = "public/blog"
 
 # Enable for syntax highlighting
 pygmentsClass = true
