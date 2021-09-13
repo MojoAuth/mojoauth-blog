@@ -141,7 +141,7 @@
             {{ range .Data.Pages }}
             <div class="card border-radius-sm border-muted">
               <div class="image">
-                <a href="{{.Permalink}}"><img src="/assets/images/{{.Params.coverimage}}"  loading="lazy" alt="{{.Title}}"/></a>
+                <a href="{{.Permalink}}"><img src="{{ '/assets/css/' | relLangURL  }}{{.Params.coverimage}}"  loading="lazy" alt="{{.Title}}"/></a>
               </div>
               <div class="description">
                 <div class="tag">

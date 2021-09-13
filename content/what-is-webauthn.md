@@ -15,7 +15,7 @@ WebAuthn works in two different scenarios: registration and login.
 
 **Registration** performs the authenticator generate a new set of public-key credentials to sign a challenge caused by the relying party(your website). The public part of these newly developed credentials, along with the signed challenge, can be sent back to your website(relying party) for database storage. The relying party uses these credentials to verify the user whenever login performs.
 
-![Webauth Flow](/assets/images/what-is-webauthn/webuauthn_flow.png)
+![Webauth Flow](../assets/images/what-is-webauthn/webuauthn_flow.png)
 
 **Login** allows the relying party(your website) to send a challenge to the authenticator, and the same can then be signed with the earlier generated public-key credentials and sent back to the relying party(like your website).
 
