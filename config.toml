@@ -1,9 +1,12 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "mojoauth" 
+title = "MojoAuth"
 
 # Enable for syntax highlighting
 pygmentsClass = true
 pygmentsCodefences = true
 pygmentsStyle = "friendly"
+
+[taxonomies]
+  author = "author"
+  tag = "tags"

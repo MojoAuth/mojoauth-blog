@@ -1,6 +1,6 @@
 ---
 title: "Why passwordless authentication is the future"
-date: 2021-07-20T14:41:23+05:30
+date: 2021-08-22T14:41:23+05:30
 coverImage: "passwordless_is_future.jpg"
 author: "Puneet Singh"
 tags: ["MojoAuth"]
