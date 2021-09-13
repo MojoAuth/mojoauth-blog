@@ -52,7 +52,7 @@
             <div class="right sidebar">&nbsp;</div>
             <div class="middle text">
               <div class="hero-image border-radius-md">
-                <img src="{{ '/assets/images/' | relLangURL  }}{{.Params.coverimage}}" loading="lazy" alt="{{.Title}}"/>
+                <img src='{{ "/assets/images/" | relLangURL  }}{{.Params.coverimage}}' loading="lazy" alt="{{.Title}}"/>
               </div>
               <hr />
               {{.Content}}
@@ -156,6 +156,6 @@
       {{ partial "footer" . }}
     </div>
     <!--main section-->
-	<script src="{{ '/assets/js/' | relLangURL  }}copy_code.js"></script>
+	<script src='{{ "/assets/js/" | relLangURL  }}copy_code.js'></script>
   </body>
 </html>
