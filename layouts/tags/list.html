@@ -16,7 +16,7 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="../../assets/css/base.min.css"
+      href='{{ "/assets/css/" | relLangURL  }}base.min.css'
     />
   </head>
   <body>
@@ -42,7 +42,7 @@
             {{ range .Pages }}
             <div class="card border-radius-sm border-muted">
               <div class="image">
-                <a href="{{.Permalink}}"><img src='{{ "/assets/css/" | relLangURL  }}{{.Params.coverimage}}'  loading="lazy" alt="{{.Title}}"/></a>
+                <a href="{{.Permalink}}"><img src='{{ "/assets/images/" | relLangURL  }}{{.Params.coverimage}}'  loading="lazy" alt="{{.Title}}"/></a>
               </div>
               <div class="description">
                 <div class="tag">
