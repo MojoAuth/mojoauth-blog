@@ -6,5 +6,4 @@ stackoverflow: 3879440
 linkedin: puneetsingh24
 twitter: lazysingh
 ---
-Ursula Kroeber Le Guin (October 21, 1929 – January 22, 2018) was an American
-novelist. The New York Times described her as “America’s greatest  science fiction writer”, although she said that she would prefer to be known as an “American novelist”.
+Puneet is a software engineer who continually seeks clean, elegant solutions to business challenges. His lifelong passion for technology drives him to proactively expand horizons, constantly exploring and evaluating new languages, platforms, frameworks and tools.
