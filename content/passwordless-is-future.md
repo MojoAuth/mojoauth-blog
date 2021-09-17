@@ -4,13 +4,11 @@ date: 2021-08-22T14:41:23+05:30
 coverImage: "passwordless_is_future.jpg"
 author: "Puneet Singh"
 tags: ["MojoAuth"]
-description: "Multi-factor authentication verifies the consumer's identity in multiple steps using different methods. Hence, it provides another layer of security on top of the login credentials."
+description: "In this article, we will see why passwords are not as good as we think and how the passwordless authentication methods are laying the foundation for a more secure standard for accessing information in the digital world."
 ---
 
 When we talk about application security, the humble combination of a username and password comes to our mind.
 This model has helped us to secure our access to information since the start of IT. But as time passes by, we have seen that today’s method of allowing people to prove ‘they are who they say they are’ through a username and password does more harm than good. 
-
-In this article, we will see why passwords are not as good as we think and how the passwordless authentication methods are laying the foundation for a more secure standard for accessing information in the digital world.
 
 ## What is Passwordless Authentication?
 
