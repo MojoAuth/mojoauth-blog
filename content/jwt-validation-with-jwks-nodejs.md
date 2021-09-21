@@ -31,21 +31,19 @@ JWKS exposes the public keys to all the clients who need to validate signatures 
 
 Before actually validating the JWT token, you need to have an endpoint that returns the JSON Web Key set you need to verify your token. We will use the node package 'node-jose' to create the key set or key store.
 
-```JavaScript
-const fs = require('fs');
+```js
+const fs = require("fs");
 
-const jose = require('node-jose');
+const jose = require("node-jose");
 
-const keyStore = jose.JWK.createKeyStore()
+const keyStore = jose.JWK.createKeyStore();
 
-    keyStore.generate('RSA', 2048, {alg: 'RS256', use: 'sig' })
-        .then(result => {
-
-            fs.writeFileSync(
-            'Keys.json',
-            JSON.stringify(keyStore.toJSON(true), null, '  ')
-
-        )})
+keyStore.generate("RSA", 2048, { alg: "RS256", use: "sig" }).then((result) => {
+  fs.writeFileSync(
+    "Keys.json",
+    JSON.stringify(keyStore.toJSON(true), null, "  ")
+  );
+});
 ```
 
 > jose.JWK.createKeyStore creates an empty Keystore, and then we generate a JWK using RS256 algorithm, which is used for signing the token.
