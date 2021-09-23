@@ -3,13 +3,13 @@ title: "MojoAuth - Passwordless Authentication Solution"
 date: 2021-08-25T14:41:23+05:30
 coverImage: "mojoauth-passwordless-authentication.png"
 author: "Shrey Gupta"
-tags: ["Article"]
+tags: ["MojoAuth"]
 description: "Multi-factor authentication verifies the consumer's identity in multiple steps using different methods. Hence, it provides another layer of security on top of the login credentials."
 ---
 
 Today, we're excited to launch MojoAuth — a passwordless login system to authenticate users successfully.
 
-Imagine remembering hundreds of passwords you’ve created for different platforms and exactly which accounts they all belong to; we know it’s hard to remember all of them. Sometimes, you recycle an old password and make it less secure, or create a new one and end up forgetting it, then re-generate the password each time. 
+Imagine remembering hundreds of passwords you’ve created for different platforms and exactly which accounts they all belong to; we know it’s hard to remember all of them. Sometimes, you recycle an old password and make it less secure, or create a new one and end up forgetting it, then re-generate the password each time.
 
 So what’s the solution? Relying on your memory to login into your account. But how effective is that? What’s the guarantee that you will not forget them again? Now think about your customers how frustrated they can be with it.
 
@@ -30,16 +30,25 @@ We have noticed that the majority of people use the same passwords on different 
 Passwordless authentication addresses this bottleneck in securing customer data. Our beta customers’ excitement and successful experiments are testaments to the fact that MojoAuth can be a game-changer to enhance the security of businesses.
 
 We've built MojoAuth with one goal in mind is to eliminate the need to generate a password to gain access to the accounts and reduce the security risk associated with passwords.
+
 ## Features of MojoAuth
 
 Currently, MojoAuth supports three of the major features for passwordless authentication and they are:
+
 ### Login via Magic Link
+
 Every time a user sends a request for access, the system sends a confirmation link (magic link) to the user’s email address which can be used only once and becomes invalid automatically after you are logged in.
+
 ### Login via OTP
-OTP login has a similar process to Magic Link. One Time Password is sent to the users via Email and that can be used only once to authenticate users, as the name suggests. 
+
+OTP login has a similar process to Magic Link. One Time Password is sent to the users via Email and that can be used only once to authenticate users, as the name suggests.
+
 ### WebAuthn
+
 Allow users to authenticate with built-in authenticators like fingerprint, pin or using security keys like YubiKey.
+
 ### Features in pipeline
+
 - QR Authn
 - Push Authn
 - Multi-factor Authentication (MFA)
@@ -61,11 +70,12 @@ Allow users to authenticate with built-in authenticators like fingerprint, pin o
 **Customer trust:** MojoAuth provides a single, strong assurance of users' identities to achieve user trust.
 
 **No code:** It supports no-code platforms like bubble.io and webflow so that anyone can implement MojoAuth easily even if he doesn’t know about the code.
+
 ## What makes MojoAuth the perfect tool for passwordless authentication?
 
 **It’s simple.** MojoAuth passwordless system can be implemented without writing a single line of code—meaning you need to add a few lines of code only.
 
-**It’s customizable.**  MojoAuth allows you to fully customize your authentication form with your brand’s logo and color scheme to give a professional appearance.
+**It’s customizable.** MojoAuth allows you to fully customize your authentication form with your brand’s logo and color scheme to give a professional appearance.
 
 **It’s secure.** Each & every layer of authentication is secure from network to authentication. Each customer’s data is stored in a separate database.
 
