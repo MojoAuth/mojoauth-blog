@@ -51,6 +51,9 @@ header {
             &:hover {
               color: $primary;
             }
+            &.active {
+              color: $primary;
+            }
           }
         }
         &.nav-links {
