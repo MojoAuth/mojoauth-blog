@@ -11,3 +11,10 @@ pygmentsStyle = "friendly"
 [taxonomies]
   author = "author"
   tag = "tags"
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+enableRobotsTXT = true
