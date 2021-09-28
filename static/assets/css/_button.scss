@@ -3,20 +3,26 @@
   width: -moz-fit-content;
   width: fit-content;
   display: inline-flex;
-  padding: 0 1.5rem;
-  font-size: 1rem;
   line-height: 1;
   border-radius: 0.25rem;
   align-items: center;
   font-weight: 500;
   text-align: center;
-  justify-content: center;
-  letter-spacing: 0.07em;
   -webkit-appearance: none;
   transition: color 0.35s, background-color 0.35s, border-color 0.35s,
     box-shadow 0.35s, opacity 0.35s;
   font-family: inherit;
-  min-height: 48px;
+  min-width: 120px;
+  min-height: 52px;
+  border-radius: 8px;
+  padding: 0 32px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 52px;
+  display: flex;
+  justify-content: center;
+  transition: all 300ms ease-in-out;
+  border: 1px solid transparent;
   &.btn-primary {
     background-color: $primary;
     color: $white;
@@ -40,6 +46,12 @@
       color: $primary-dark;
       background-color: $primary-light;
     }
+  }
+  &.btn-sm {
+    min-height: 38px;
+    line-height: 38px;
+    padding: 0 16px;
+    font-size: 16px;
   }
 }
 .btn-group {

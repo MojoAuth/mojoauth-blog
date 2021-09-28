@@ -1,20 +1,23 @@
 .footer {
-  padding: 48px 0;
-  border-top: 1px solid $hairline;
   section {
+    background-color: $coolGray-10;
     & > div {
+      min-height: 70px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
       @extend %space-between;
       @media (max-width: 992px) {
         flex-direction: column;
       }
-      ul {
+      .social-links {
         margin: 0;
         padding: 0;
         display: flex;
         list-style: none;
         li {
+          padding: 0 12px;
           a {
-            padding: 0 16px;
             transition: 0.2s ease-in-out;
             @media (max-width: 556px) {
               padding: 0 12px;
@@ -23,6 +26,8 @@
               padding: 0 12px;
             }
             svg {
+              display: block;
+              vertical-align: middle;
               fill: $black;
               transition: 0.2s ease-in-out;
             }
@@ -34,31 +39,48 @@
             }
           }
         }
-        &.links {
-          @media (max-width: 992px) {
-            order: 2;
-            padding: 26px 0;
-          }
-          @media (max-width: 400px) {
-            flex-direction: column;
-            align-items: center;
-          }
-          li {
-            @media (max-width: 400px) {
-              padding: 12px 0;
-            }
-            &:not(:last-child) {
-              a {
-                @media (min-width: 400px) {
-                  border-right: 1px solid $bodyText;
-                }
-              }
-            }
-          }
-        }
+      }
+      ul {
         &.social-links {
           @media (max-width: 992px) {
             order: 1;
+          }
+        }
+      }
+      .link {
+        @media (max-width: 992px) {
+          order: 2;
+          padding: 26px 0;
+        }
+        @media (max-width: 400px) {
+          flex-direction: column;
+          align-items: center;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          list-style: none;
+          li {
+            &:not(:last-child) {
+              margin-right: 12px;
+              padding-right: 12px;
+              border-right: 1px solid #4d5358;
+            }
+            @media (max-width: 400px) {
+              padding: 12px 0;
+            }
+            a {
+              padding: 0;
+              color: $bodyText;
+              &:hover {
+                color: $primary-dark;
+              }
+            }
+            &:not(:last-child) {
+              margin-right: 12px;
+              padding-right: 12px;
+            }
           }
         }
       }
