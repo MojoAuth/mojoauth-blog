@@ -1,16 +1,27 @@
 ---
 title: "How To Implement MojoAuth Magic Link Authentication Using JWT in Node?"
-date: 2021-10-06T11:31:23+05:30
-coverImage: "How_To_implement_Magic_Link_Authentication.jpg"
+date: 2021-10-06
+coverImage: "magic-link-authentication.jpg"
 author: "Vishal Sharma"
-tags: ["Webauth"]
-description: "When we implement passwordless authentication with is also known as "magic links", the user is sent an email with 
-a link in it. This link allow's user to login directly by clicking on it.The user then clicks the button or link in the email and 
-is automatically signed in to your application without asking for a passowrd."
+tags: ["Magic Link"]
+description: "An implement of password-less authentication is known as "Magic Links".
 ---
 
 ## What is Magic Link Authentication?
-Magic links provide a way for user's to authenticate directly without using a password. The whole process of authentication with a magic link involves around the email given by the user. User get's an email with link in it by clicking on it the user get directly signed into the application without asking for a password. 
+
+Magic links provide a way for user's to authenticate directly without using a password something like we use OTP(One Time Password). The whole process of authentication with a magic link revolves around the email given by the user. User get's an email with link in it by clicking in the link user get directly signed into the application and services without asking for a password. 
+
+As there are many organizations in the world who have been moved beyond password-based authentication to magic link authentication,they use magic login as an emerging popular consumer authentication method,depending on a company risk. Whether we use Slack magic link or a tumblr magic link a free and a easy way to get easily access our own applictions and services, using magic link login which frees us from remembering a long list of password.
+
+<hr>
+
+## How do Magic Link Works?
+
+Magic link login revolves around three steps:-
+
+1. The user enters their email address on their sign-in screen.<br/>
+2. If it is a registered email address,then the user will receive an email with an magic link.<br/>
+3. The user opens their email and clicks the magic link to complete the sign in process without asking for a password.
 
 <hr>
 
@@ -66,7 +77,7 @@ router.post('/login', (req, res) => {
 ```
 
 This should result in user receiving our email and clicking button that will redirect him to URL something 
-like `https://magiclinkapp.com/login?token=...` From that point we need to handle the final request. To keep things simple let’s see how it can be done using JWT strategy for Passport. It will take care of checking token’s validity. Firstly, we need to configure the strategy.
+like `https://magiclinkapp.com/login?token=...` From this point we need to handle final request. To keep things simple and easy let’s us see how it can be done by using JWT strategy.
 
 ```javascript
 
@@ -95,7 +106,7 @@ passport.use(
 
 ```
 
-And finally we can process the request and login user to the app if the token is valid.
+And now finally we will be able to process the request of login user to the app if the token is valid.
 
 ```javascript
 
