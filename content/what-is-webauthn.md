@@ -1,5 +1,6 @@
 ---
 title: "What is WebAuthn?"
+read_time : "3 min"
 date: 2021-08-15T14:41:23+05:30
 coverImage: "what_is_webauthn.jpg"
 author: "Ashish Sharma"

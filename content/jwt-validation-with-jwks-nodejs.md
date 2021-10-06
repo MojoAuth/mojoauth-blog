@@ -1,5 +1,6 @@
 ---
 title: "JWT validation with JWKs in Node.js"
+read_time : "6 min"
 date: 2021-09-20T14:41:23+05:30
 coverImage: "jwk_validation_node.jpg"
 author: "Mehul Sharma"
