@@ -18,6 +18,7 @@
       media="screen"
       href='{{ "/assets/css/" | relLangURL  }}base.min.css'
     />
+    {{ partial "gtag" .}}
   </head>
   <body>
     <!--main section-->
@@ -67,5 +68,6 @@
       {{ partial "footer" . }}
     </div>
     <!--main section-->
+    {{ partial "gtagfooter" .}}
   </body>
 </html>
