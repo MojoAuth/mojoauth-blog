@@ -1,0 +1,31 @@
+
+<!--  Title Tags -->
+<title itemprop="name">{{ .Params.name }} | {{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Params.name }} | {{ .Site.Title }}" />
+<meta name="twitter:title" content="{{ .Params.name }} | {{ .Site.Title }}" />
+<meta itemprop="name" content="{{ .Params.name }} | {{ .Site.Title }}" />
+<meta name="application-name" content="{{ .Params.name }} | {{ .Site.Title }}" />
+<meta property="og:site_name" content="{{ .Params.name }} | {{ .Site.Title }}" />
+
+
+<meta property="og:type" content="website">
+
+<!--  Description Tags -->
+<meta name="description" content="{{ .Content }}" />
+<meta itemprop="description" content="{{ .Content }}" />
+<meta property="og:description" content="{{ .Content }}" />
+<meta name="twitter:description" content="{{ .Content }}" />
+
+<!--  Link Tags -->
+<base href="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
+<meta name="url" content="{{ .Permalink }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" /> 
+<meta property="og:url" content="{{ .Permalink }}" />
+
+<!--  Image Tags -->
+<meta itemprop="image" content="{{ .Params.photo }}" />
+<meta itemprop="image" content="{{ .Params.photo }}" />
+<meta property="og:image" content="{{ .Params.photo }}" /> 
+<meta name="twitter:image" content="{{ .Params.photo }}" />
+<meta name="twitter:image:src" content="{{ .Params.photo }}" /> 

@@ -1,6 +1,6 @@
 baseURL = "https://mojoauth.com/blog"
 languageCode = "en-us"
-title = "MojoAuth"
+title = "MojoAuth Blog"
 publishDir = "public/blog"
 
 # Enable for syntax highlighting
@@ -16,5 +16,13 @@ pygmentsStyle = "friendly"
   changefreq = 'weekly'
   filename = 'sitemap.xml'
   priority = 0.5
+
+[params]
+  linkedin = "https://www.linkedin.com/company/mojoauth"
+  github = "https://github.com/MojoAuth"
+  ogimage = "/blog/assets/images/logo.svg"
+  tagline = "Secure and Delightful Passwordless Experience"
+  description = "Get more signups and build trust using Passwordless Authentication"
+  twitter = "@mojoauth"
 
 enableRobotsTXT = true
