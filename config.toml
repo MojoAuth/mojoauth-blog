@@ -1,6 +1,6 @@
 baseURL = "https://mojoauth.com/blog"
 languageCode = "en-us"
-title = "MojoAuth"
+title = "MojoAuth Blog"
 publishDir = "public/blog"
 
 # Enable for syntax highlighting
