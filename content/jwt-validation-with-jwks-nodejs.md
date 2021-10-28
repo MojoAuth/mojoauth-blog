@@ -4,7 +4,7 @@ date: 2021-09-20T14:41:23+05:30
 coverImage: "jwk_validation_node.jpg"
 author: "Mehul Sharma"
 tags: ["MojoAuth"]
-description: "Multi-factor authentication verifies the consumer's identity in multiple steps using different methods. Hence, it provides another layer of security on top of the login credentials."
+description: "Learn how to create, sign and validate your JWT tokens using RS256 with JWKS endpoint in Node.JS"
 ---
 
 ## What is JWT?
