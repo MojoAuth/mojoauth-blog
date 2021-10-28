@@ -4,7 +4,7 @@ date: 2021-08-25T14:41:23+05:30
 coverImage: "mojoauth-passwordless-authentication.png"
 author: "Shrey Gupta"
 tags: ["MojoAuth"]
-description: "Multi-factor authentication verifies the consumer's identity in multiple steps using different methods. Hence, it provides another layer of security on top of the login credentials."
+description: "MojoAuth is a safest passwordless authentication solution that enables your users to login seamlessly with an email OTP or magic link or WebAuthn, which in turn provides stronger security to your business."
 ---
 
 Today, we're excited to launch MojoAuth — a passwordless login system to authenticate users successfully.
