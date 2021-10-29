@@ -3,7 +3,7 @@ title: "What is JWT? How does it work?"
 date: 2021-10-28T13:33:58+05:30
 coverImage: "what-is-jwt.jpg"
 author: "Mehul Sharma"
-tags: ["MojoAuth"]
+tags: ["Article"]
 description: "JWT or JSON Web Tokens are the new industry standards for securing APIs to and from the server. But what exactly is JWT? How does it work? Let us understand it more in detail.
 "
 ---

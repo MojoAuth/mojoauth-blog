@@ -3,7 +3,7 @@ title: "JWT validation with JWKs in Node.js"
 date: 2021-09-20T14:41:23+05:30
 coverImage: "jwk_validation_node.jpg"
 author: "Mehul Sharma"
-tags: ["MojoAuth"]
+tags: ["Tutorial"]
 description: "Learn how to create, sign and validate your JWT tokens using RS256 with JWKS endpoint in Node.JS"
 ---
 

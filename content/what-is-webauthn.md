@@ -3,7 +3,7 @@ title: "What is WebAuthn?"
 date: 2021-08-15T14:41:23+05:30
 coverImage: "what_is_webauthn.jpg"
 author: "Ashish Sharma"
-tags: ["Webauth"]
+tags: ["Article"]
 description: "A better alternative for securing our sensitive information online. Learn about WebAuthn and its use-cases along with its future in passwordless authentication."
 ---
 
