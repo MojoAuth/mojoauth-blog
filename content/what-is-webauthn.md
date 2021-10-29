@@ -4,7 +4,7 @@ date: 2021-08-15T14:41:23+05:30
 coverImage: "what_is_webauthn.jpg"
 author: "Ashish Sharma"
 tags: ["Webauth"]
-description: "Multi-factor authentication verifies the consumer's identity in multiple steps using different methods. Hence, it provides another layer of security on top of the login credentials."
+description: "A better alternative for securing our sensitive information online. Learn about WebAuthn and its use-cases along with its future in passwordless authentication."
 ---
 
 WebAuthn is a browser-based API that allows websites to use built-in authenticators or secure keys to authenticate users. When a user registers, a public-private key pair is generated for the account. The private key is securely stored in the user's device, while the public key is sent to the server. Then, the server can use the private key to ask the user's device to sign a "challenge" to verify the user's identity.
@@ -36,4 +36,3 @@ WebAuthn doesn't ask for a password. It's following the recommended security pra
 
 WebAuthn enables Identity Providers like Facebook, Google, and Amazon to implement an authentication strategy that allows users to define which authenticator makes the most sense. So, instead of the sites you visit choosing which authenticator should be used for MFA, the user can decide which authenticator you would like to use. Maybe you'd like to use your fingerprint reader as your second factor or YubiKey. The user can determine what authentication factor makes the most sense for them.
 WebAuthn is new, and it is a unique experience for many users, so you will be experiencing a more secure, scalable, and robust web authentication experience shortly.
-

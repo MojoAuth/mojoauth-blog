@@ -9,7 +9,9 @@ description: "Learn how to create, sign and validate your JWT tokens using RS256
 
 ## What is JWT?
 
-JSON Web Token (JWT) is an open standard that defines how to transmit information between two parties in a compact and self-sustained way. This information is highly trusted and verified as it is signed digitally. JWTs use a public/private key pair or a secret for signing. The advantage of JWT is in its feature; it just needs a simple cryptographic operation. The client needs to access the public/private key pair used for signing the JWT, and he can validate it using that key pair.
+[JSON Web Token (JWT)](https://mojoauth.com/blog/what-is-jwt/) is an open standard that defines how to transmit information between two parties in a compact and self-sustained way. This information is highly trusted and verified as it is signed digitally.
+
+JWTs use a public/private key pair or a secret for signing. The advantage of JWT is in its feature; it just needs a simple cryptographic operation. The client needs to access the public/private key pair used for signing the JWT, and he can validate it using that key pair.
 
 ## What is JWKs?
 
