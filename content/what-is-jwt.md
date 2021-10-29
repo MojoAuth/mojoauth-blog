@@ -1,5 +1,5 @@
 ---
-title: "What Is JWT? How does it work?"
+title: "What is JWT? How does it work?"
 date: 2021-10-28T13:33:58+05:30
 coverImage: "what-is-jwt.jpg"
 author: "Mehul Sharma"
