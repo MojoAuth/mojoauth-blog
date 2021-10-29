@@ -72,19 +72,19 @@ JWT or JSON Web Tokens are mainly used for authentication, authorization, and in
 
 - **Authentication:** In the case of authentication, a JWT is returned when the user successfully logs in using their credentials. User can save it locally either in the local storage, session storage, or cookies.
 
-  ```js
-  {
-  "access_token": "eyJhb...",
-  "token_type": "Bearer",
-  "expires_in": 3600
-  }
-  ```
+    ```js
+    {
+    "access_token": "eyJhb...",
+    "token_type": "Bearer",
+    "expires_in": 3600
+    }
+    ```
 
 - **Authorization:** Once the user successfully logs in, there may be a need to access data from the server. In such cases, the user can use JWT to retrieve the data. JWT should be sent by the user, typically in the Authorization header using the Bearer schema.
 
-  ```js
-  Authorization: Bearer eyJhbGci...<snip>...yu5CSpyHI
-  ```
+    ```js
+    Authorization: Bearer eyJhbGci...<snip>...yu5CSpyHI
+    ```
 
 - **Information Exchange:** JWTs are widely used to exchange a set of information between parties. Since they are signed, you can be sure of the sender that he is genuine. Also, the signature part of the token allows you to make sure that the token has not been tampered with.
 
@@ -94,7 +94,9 @@ Since the JWTs are digitally signed, they are widely trusted, and the informatio
 
 ### Tampering with the signing algorithm
 
-- **None algorithm:** In the cases where the integrity of the token is already verified by other means, JWT supports using the 'none' algorithm. With this algorithm, a JWT token can be issued by the server without any signature.
+There are many algorithms used to sign the JWT tokens, one of which is none algorithm. This algorithm can be used as a gateway for attackers to tamper with the security of application.
+
+**None algorithm** is supported by JWT in the cases where the integrity of the token is already verified by other means. With this algorithm, a JWT token can be issued by the server without any signature.
 
 The attacker can use this vulnerablity to their advantage by setting the algorithm to 'none,' giving a null signature, and fooling the server to accept it as a valid token. However, many libraries have already been patched for this vulnerability and added security checks to reject the none algorithm.
 
