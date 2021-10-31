@@ -85,7 +85,7 @@ Allow users to authenticate with built-in authenticators like fingerprint, pin o
 
 **It’s responsive.** MojoAuth offers an instant reflection of user data in the dashboard—and allows users to log in at any time.
 
-**It’s well documented.** Documents are easy to understand and contains a comprehensive guide including implementation tutorials, example code, features and more.
+**It’s well documented.** Documents are easy to understand and contain a comprehensive guide including implementation tutorials, example code, features and more.
 
 **It’s free.** MojoAuth costs nothing; it is built by developers for developers by heart.
 
