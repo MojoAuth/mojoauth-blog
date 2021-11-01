@@ -7,13 +7,13 @@ tags: ["Tutorial"]
 description: "Learn how to create, sign and validate your JWT tokens using RS256 with JWKS endpoint in Node.JS"
 ---
 
-## What is JWT?
+## What is a JWT?
 
 [JSON Web Token (JWT)](https://mojoauth.com/blog/what-is-jwt/) is an open standard that defines how to transmit information between two parties in a compact and self-sustained way. This information is highly trusted and verified as it is signed digitally.
 
 JWTs use a public/private key pair or a secret for signing. The advantage of JWT is in its feature; it just needs a simple cryptographic operation. The client needs to access the public/private key pair used for signing the JWT, and he can validate it using that key pair.
 
-## What is JWKs?
+## What are JWKs?
 
 ​​A JSON Web Key (JWK) is a JSON data structure that represents a cryptographic key. JWKs are a set of keys shared between different services and are used to verify the JWT token from the authorization server.
 
@@ -25,7 +25,7 @@ JWKS exposes the public keys to all the clients who need to validate signatures 
 2. Create/have a token endpoint and sign the token.
 3. Retrieve the JWKS from the JWKs endpoint.
 4. Extract the JWT from the request's authorization header.
-5. Decode the JWT and grab the unique kid property of the token from the header.
+5. Decode the JWT and grab the unique kid (Key ID) property of the token from the header.
 6. Find the signature verification key in JWKS with a matching kid property.
 7. Verify the token with the filtered JWKs.
 
@@ -49,7 +49,7 @@ keyStore.generate("RSA", 2048, { alg: "RS256", use: "sig" }).then((result) => {
 ```
 
 > jose.JWK.createKeyStore creates an empty Keystore, and then we generate a JWK using RS256 algorithm, which is used for signing the token.
-> The 'true' argument returns the public and the private section of the asymmetric key, which would be used later to sign the tokens.
+> The 'true' argument returns the public and the private section of the asymmetric key, which will be used later to sign the tokens.
 
 Now lets return the public key to JSON using expressJs:
 
@@ -63,7 +63,7 @@ router.get("/jwks", async (req, res) => {
 });
 ```
 
-This would return the JSON web key set would further be used to verify the token.
+This will return the JSON web key set that will further be used to verify the token.
 
 ### Creating token endpoint and signing
 
@@ -91,11 +91,11 @@ router.get("/tokens", async (req, res) => {
 });
 ```
 
-This would return a signed token with an 'expiry date' and 'issued at date' complying with the JWT standards.
+This will return a signed token with an 'expiry date' and 'issued at date' complying with the JWT standards.
 
 ### Validating the token
 
-To validate the token, first, you need to get the JSON web key set from the JWKs endpoint. The token will be received as JSON in the validation endpoint in the body. Now, we need to decode the token to get the kid, which would be used to find the key we need to verify the signature. After that, we call JWKs endpoint, retrieve the key set, and find the keys matching the kid of the token. The public key is then obtained by converting the retrieved key by using node package 'jwk-to-pem'. Once we have the token and the matched JWKs, the only thing left is verifying the token.
+To validate the token, first, you need to get the JSON web key set from the JWKs endpoint. The token will be received as JSON in the validation endpoint in the body. Now, we need to decode the token to get the kid, which will be used to find the key we need to verify the signature. After that, we call the JWKs endpoint, retrieve the key set, and find the keys matching the kid of the token. The public key is then obtained by converting the retrieved key by using node package 'jwk-to-pem'. Once we have the token and the matched JWKs, the only thing left is verifying the token.
 
 ```js
 router.post("/verify", async (req, res) => {
