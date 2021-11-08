@@ -7,7 +7,7 @@ tags: ["Passwordless"]
 description: "Just because you don’t have to pay anything extra to buy this common form of authentication, it doesn’t mean that passwords are free. Far from it, quite often passwords end up costing enterprises much more than what they have bargained for."
 ---
 
-Passwords have become an integrated part of our lives these days. With the rising Technology sector, every person has to keep an average of 25 passwords per account.
+Passwords have become an integrated part of our lives these days. With the rising Technology sector, the average user now has 25 percent more passwords than they did before the pandemic began. According to research from NordPass, the average person has approximately 100 passwords to remember!
 
 Anyone with a computer at work and internet at home is likely to drown in the management of passwords. Organizations have to ensure the security of passwords since a lot is at stake.
 It just takes one lousy break for your valuable company information, addresses, emails, tax documents, sensitive workplace materials, and bank account information to fall into ill-intentioned hands.
@@ -16,7 +16,8 @@ If an attacker gets access to the password database, then all passwords are rend
 
 ## What is the problem with passwords?
 
-The password attack methods ranging from brute force to phishing are continuously evolving and are responsible for 81% of the breaches. Most insider attacks go unreported, resulting in the average cost of insider reach as high as **$600,000 per incident**.
+The password attack methods ranging from brute force to phishing are continuously evolving and are responsible for 81% of the breaches. Most insider attacks go unreported, 
+and According to Ponemon Institute's 2018 Cost of Insider Threats: Global, threats involving stolen credentials typically cost upwards of **$600,000 per incident**.
 
 The risk is more for organizations that rely on third-party services, which may not inform their clients that their confidential information has been stolen. Most of these organizations are left unaware that they've effectively been breached and are now vulnerable.
 
@@ -28,15 +29,15 @@ Attacks on passwords vary in cost and complexity. Some of the most popular episo
 
 - **Brute force attacks**: An encrypted blob is obtained containing credentials of interest (such as the SAM database). It can then use a computer rig to crack through the database until the passwords are revealed.
 
-- **Credential stuffing**: A database of compromised credentials is being loaded and tested against the system hoping that one or more credentials in the database match a legitimate user.
+- **Credential stuffing**: A database of compromised credentials is loaded and tested against the system hoping that one or more credentials in the database match a legitimate user.
 
-- **Shoulder surfing**: Personal information or confidential information is stolen by peering over the target's shoulders. By its nature, it's used mainly by insider threat actors.
+- **Shoulder surfing**: Personal information or confidential information is stolen by peering over the target's shoulders. By its nature, it's often used by insider threat actors.
 
 - **Password spraying**: A list of commonly used passwords is replayed, hoping that one of them is being used by a legitimate user. It is estimated that 16% of password attacks are performed using password spraying.
 
-- **Phishing**: The attacker impersonates a trusted contact or creates a matter of urgency and encourages users to click on links provided that are then used to ex-filtrate passwords using an exploit kit. OR The attacker pushes the user to download a document that contains malware, which is then used to ex-filtrate the credentials. Both phishing methods are responsible for the majority of the attacks against passwords.
+- **Phishing**: The attacker impersonates a trusted contact or creates a matter of urgency and encourages users to click on links provided that are then used to exfiltrate passwords using an exploit kit. OR The attacker pushes the user to download a document that contains malware, which is then used to exfiltrate the credentials. Both phishing methods are responsible for the majority of the attacks against passwords.
 
-- **Application vulnerabilities**: Lags in the system and application patches are targeted and exploited to inject malware to ex-filtrate the credentials.
+- **Application vulnerabilities**: Lags in the system and application patches are targeted and exploited to inject malware to exfiltrate the credentials.
 
 - **Bribe**: The attacker bribes an insider to either obtain credentials on their behalf or perform malicious actions that allow the attacker to bypass corporate security.
 
@@ -50,4 +51,4 @@ The best way to avoid password leaks is to prevent passwords altogether. Passwor
 
 By using the verifying options such as magic link, email OTP, webAuthn, and phone login, one can prevent the password attacks, and thus reducing the cost of passwords considerably.
 
-One of such products is MojoAuth passwordless login feature. It provides a seamless and convenient passwordless authentication which is easy to use, reliable, stable, and secure.
+One such product is MojoAuth passwordless login feature. It provides a seamless and convenient passwordless authentication which is easy to use, reliable, stable, and secure.
