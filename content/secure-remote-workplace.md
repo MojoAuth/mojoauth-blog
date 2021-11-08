@@ -3,7 +3,7 @@ title: "Best Practices for Establishing Secure Remote Workplace for Your Employe
 date: 2021-11-08T00:01:23+05:30
 coverImage: "secure-remote-workplace.jpg"
 author: "Shrey Gupta"
-tags: ["Security"]
+tags: ["Article"]
 description: "Security should be a priority in remote workplaces. Wondering how to keep your employees’ remote work secure? Find out in this article."
 ---
 
