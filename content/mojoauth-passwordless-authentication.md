@@ -11,15 +11,15 @@ Today, we're excited to launch MojoAuth — a passwordless login system to authe
 
 Imagine remembering hundreds of passwords you’ve created for different platforms and exactly which accounts they all belong to; we know it’s hard to remember all of them. Sometimes, you recycle an old password and make it less secure, or create a new one and end up forgetting it, then re-generate the password each time.
 
-So what’s the solution? Relying on your memory to login into your account. But how effective is that? What’s the guarantee that you will not forget them again? Now think about your customers how frustrated they can be with it.
+So what’s the solution? Relying on your memory to login to your account. But how effective is that? What’s the guarantee that you will not forget them again? Now think about your customers how frustrated they can be with it.
 
 To get over remembering numerous passwords, many users pursue unsafe shortcuts like using the same password for all applications, using weak passwords, repeating passwords, or posting passwords on sticky notes. That’s where malicious actors take advantage of this situation and steal confidential data by compromising account credentials.
 
-Many companies think that having a password in place will solve all their cybersecurity problems, but that’s not true instead passwords can be easily compromised. In fact, [81%](https://bnd.nd.gov/81-of-company-data-breaches-due-to-poor-passwords/) of data breaches are caused by either stolen or weak passwords.
+Many companies think that having a password in place will solve all their cybersecurity problems, but that’s not true, as passwords can be easily compromised. In fact, [81%](https://bnd.nd.gov/81-of-company-data-breaches-due-to-poor-passwords/) of data breaches are caused by either stolen or weak passwords.
 
 The only solution to prevent this is PASSWORDLESS AUTHENTICATION.
 
-Passwordless authentication is a method of verifying users’ identities without the use of passwords means there is no need to generate passwords. We know this sounds weird, how login into the account is possible without a password in place. Trust us, we made it possible through MojoAuth.
+Passwordless authentication is a method of verifying users’ identities without the use of passwords, which means there is no need to generate passwords. We know this sounds weird, how login into the account is possible without a password in place. Trust us, we made it possible through MojoAuth.
 
 MojoAuth is a passwordless authentication solution that allows users to login into their account without generating the password, which in turn provides stronger security and fewer breaches. We replaced the traditional password way of login with a more secure authentication way such as login via OTP, Magic Link and WebAuthn. This also cuts the extra step of you fumbling over your forgotten password.
 
@@ -29,11 +29,11 @@ We have noticed that the majority of people use the same passwords on different 
 
 Passwordless authentication addresses this bottleneck in securing customer data. Our beta customers’ excitement and successful experiments are testaments to the fact that MojoAuth can be a game-changer to enhance the security of businesses.
 
-We've built MojoAuth with one goal in mind is to eliminate the need to generate a password to gain access to the accounts and reduce the security risk associated with passwords.
+We've built MojoAuth with one goal in mind: to eliminate the need to generate a password to gain access to the accounts and reduce the security risk associated with passwords.
 
 ## Features of MojoAuth
 
-Currently, MojoAuth supports three of the major features for passwordless authentication and they are:
+Currently, MojoAuth supports three of the major features for passwordless authentication which are:
 
 ### Login via Magic Link
 
@@ -81,11 +81,11 @@ Allow users to authenticate with built-in authenticators like fingerprint, pin o
 
 **It’s reliable.** With 99.9% uptime, it ensures audiences around the world can access your apps anytime, anywhere.
 
-**It’s scalable.** MojoAuth can scale with you as your business grow, it supports a high level of scaling and concurrency.
+**It’s scalable.** MojoAuth can scale with you as your business grows, it supports a high level of scaling and concurrency.
 
-**It’s responsive.** MojoAuth offers an instant reflection of user data in the dashboard—and allows users to log in at no time.
+**It’s responsive.** MojoAuth offers an instant reflection of user data in the dashboard—and allows users to log in at any time.
 
-**It’s well documented.** Documents are easy to understand and contains a comprehensive guide including implementation tutorials, example code, features and more.
+**It’s well documented.** Documents are easy to understand and contain a comprehensive guide including implementation tutorials, example code, features and more.
 
 **It’s free.** MojoAuth costs nothing; it is built by developers for developers by heart.
 

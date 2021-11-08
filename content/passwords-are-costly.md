@@ -3,7 +3,7 @@ title: "How Passwords are costly"
 date: 2021-08-18T14:41:23+05:30
 coverImage: "passwords_are_costly.jpg"
 author: "Mehul Sharma"
-tags: ["MojoAuth"]
+tags: ["Passwordless"]
 description: "Just because you don’t have to pay anything extra to buy this common form of authentication, it doesn’t mean that passwords are free. Far from it, quite often passwords end up costing enterprises much more than what they have bargained for."
 ---
 
