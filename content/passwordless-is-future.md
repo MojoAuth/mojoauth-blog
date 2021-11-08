@@ -24,24 +24,23 @@ Every other day we hear about data breaches. According to Forbes, data breaches 
 
 Authentication methods which require only username and password are inherently vulnerable to cyber attacks. Attackers can guess or steal credentials and gain access to sensitive information and IT systems using a variety of techniques, including:
 
- - Brute force methods – using script to try random username/password combinations or exploit common weak passwords like 123456
+ - Brute force methods – using scripts to try random username/password combinations or exploit common weak passwords like 123456
  - Phishing – using a fake user interface of the original site and tricking a user into replying with their credentials
  - Keylogging – installing malware on a computer to capture username/password keystrokes
  - Man-in-the-middle attacks – intercepting communications streams (over public WiFi, for example) and hijacking credentials
  - Credential stuffing – using leaked credentials from one account to trying it get access to other accounts (people often use the same username/password combination for many accounts)
 
-That's the reason we need a better approch than just username and password to handle authentication, which should be more safe and beneficial for everybody. And as sais by a famous security consultant.
-
-`As many organizations transition to a long-term remote work culture, giving your employees the tools and resources to be secure online in their personal lives as well as in the home office is more important now than ever,` said Gerald Beuchelt, CISO at LogMeIn.
+That's the reason we need a better approch than just username and password to handle authentication, which should be safer and beneficial for everyone. And as said by Gerald Beuchelt, Chief Information Security Officer (CISO) at LogMeIn: 
+"As many organizations transition to a long-term remote work culture, giving your employees the tools and resources to be secure online in their personal lives as well as in the home office is more important now than ever".
 
 
 ## Benefits of Going Passwordless
 
 ### 1. Enhanced Security
-Since passwordless logins have no use of passwords, it reduces the risks of phishing and credential spoofing. This also protects your users from man-in-the-middle and other replay attacks that rely on passwords.
+Since passwordless logins involve no use of passwords, it reduces the risks of phishing and credential spoofing. This also protects your users from man-in-the-middle and other replay attacks that rely on passwords.
 
-### 2. Better User Experience and 
-Passwordless login methods help end-users to remember complicated passwords, and hence the chances of user onboarding are much more compared to using traditional password-based authentication.
+### 2. Better User Experience
+Passwordless login methods reduces the need for end-users to remember complicated passwords, and hence the chances of completing user onboarding are much more compared to using traditional password-based authentication.
 
 ### 3. Reduced IT management costs
 Believe it or not, managing passwords is now quite a luxury. In order to provide a secure infrastructure, each operating business needs to set up and manage password reset and expiration processes, detect breached passwords, implement secure password complexity policies, etc. So to reduce operation costs, a decision to give up on passwords could be made.
@@ -50,7 +49,7 @@ Believe it or not, managing passwords is now quite a luxury. In order to provide
 Since things like email addresses, mobile phones, etc., are used to get magic links, OTPs, and biometric fingerprints, and these things are something that users already have. Using emails from third-party services which have already verified the user identities makes the passwordless login more trustworthy.
 
 ### 5. Ease of Implementation
-Passwordless authentication is easier to implement, and most passwordless login systems can be easily implemented in mere 5-10 minutes. 
+Passwordless authentication is easier to implement, and most passwordless login systems can be easily implemented in a mere 5-10 minutes. 
 
 
 
