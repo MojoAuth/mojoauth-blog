@@ -1,0 +1,50 @@
+{{ $paginator := $.Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+<section class="py-72">
+  <div>
+    <ul class="pagination">
+      <li>
+        <a {{ if $paginator.HasPrev }}href="{{ $paginator.Prev.URL }}"{{ end }} class="prew {{ if not $paginator.HasPrev }} disabled{{ end }}">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-chevron-left"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+      </li>
+      {{ range $paginator.Pagers }}
+      <li class="link">
+        <a href="{{ .URL }}"  {{ if eq $paginator.PageNumber .PageNumber }}class="active"{{ end }} > {{ .PageNumber }}</a>
+      </li>
+      {{ end }}
+      <li>
+        <a {{ if $paginator.HasNext }}href="{{ $paginator.Next.URL }}"{{ end }} class="prew {{ if not $paginator.HasNext }} disabled{{ end }}">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-chevron-right"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+{{ end }}
