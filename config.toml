@@ -8,6 +8,8 @@ pygmentsClass = true
 pygmentsCodefences = true
 pygmentsStyle = "friendly"
 
+paginate = 9
+
 [taxonomies]
   author = "author"
   tag = "tags"
