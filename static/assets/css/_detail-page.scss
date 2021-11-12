@@ -177,6 +177,13 @@
       }
     }
   }
+  .description {
+    .grid-70-30>div {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
   .blog-listing {
     padding-top: 72px;
     h2 {

@@ -1,7 +1,7 @@
 ---
 title: "Biometric authentication into YubiKey"
 date: 2021-11-11T14:41:23+05:30
-coverImage: "biometric-authentication-into-yubikey.jpg"
+coverImage: "biometric_authentication_into_yubikey.jpeg"
 author: "Ashish Sharma"
 tags: ["Article"]
 description: "Learn about Biometric Security Key (YubiKey Bio) and its advantage along with its future in passwordless authentication."
