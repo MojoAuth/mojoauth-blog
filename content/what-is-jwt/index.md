@@ -4,8 +4,7 @@ date: 2021-10-28T13:33:58+05:30
 coverImage: "what-is-jwt.jpg"
 author: "Mehul Sharma"
 tags: ["Article"]
-description: "JWT or JSON Web Tokens are the new industry standards for securing APIs to and from the server. But what exactly is JWT? How does it work? Let us understand it more in detail.
-"
+description: "JWT or JSON Web Tokens are the new industry standards for securing APIs to and from the server. But what exactly is JWT? How does it work? Let us understand it more in detail."
 ---
 
 ## Introduction to JWT
@@ -72,19 +71,19 @@ JWT or JSON Web Tokens are mainly used for authentication, authorization, and in
 
 - **Authentication:** In the case of authentication, a JWT is returned when the user successfully logs in using their credentials. User can save it locally either in the local storage, session storage, or cookies.
 
-    ```js
-    {
-    "access_token": "eyJhb...",
-    "token_type": "Bearer",
-    "expires_in": 3600
-    }
-    ```
+  ```js
+  {
+  "access_token": "eyJhb...",
+  "token_type": "Bearer",
+  "expires_in": 3600
+  }
+  ```
 
 - **Authorization:** Once the user successfully logs in, there may be a need to access data from the server. In such cases, the user can use JWT to retrieve the data. JWT should be sent by the user, typically in the Authorization header using the Bearer schema.
 
-    ```js
-    Authorization: Bearer eyJhbGci...<snip>...yu5CSpyHI
-    ```
+  ```js
+  Authorization: Bearer eyJhbGci...<snip>...yu5CSpyHI
+  ```
 
 - **Information Exchange:** JWTs are widely used to exchange a set of information between parties. Since they are signed, you can be sure of the sender that he is genuine. Also, the signature part of the token allows you to make sure that the token has not been tampered with.
 

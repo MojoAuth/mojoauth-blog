@@ -1,6 +1,6 @@
 ---
 title: "What is Biometric Authentication?"
-date: 2021-11-04T14:41:23+05:30
+date: 2021-11-01T14:41:23+05:30
 coverImage: "what_is_biometric_authentication.jpg"
 author: "Ashish Sharma"
 tags: ["Article"]
