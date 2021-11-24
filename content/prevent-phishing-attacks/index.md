@@ -31,12 +31,12 @@ Scammers through Emails and text messages often tell you a story to trick you in
 
 They may say they've:
 
-- **noticed some suspicious activity or login attempts**
-- **noticed a problem with your account or your payment information**
-- **sent you an invoice which is a fake one**
-- **sent you a link and want you to make payment**
-- **sent you a refund**
-- **offered some free stuff or coupons**
+- **Noticed some suspicious activity or login attempts**
+- **Noticed a problem with your account or your payment information**
+- **Sent you an invoice which is a fake one**
+- **Sent you a link and want you to make payment**
+- **Sent you a refund**
+- **Offered some free stuff or coupons**
 
 People often fall for one of these lucrative scams and lose their valuable information or account to the scammers.
 
