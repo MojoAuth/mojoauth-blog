@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -54,7 +54,8 @@
             <div class="right sidebar">&nbsp;</div>
             <div class="middle text">
               <div class="hero-image border-radius-md">
-                <img src='{{ "/assets/images/" | relLangURL  }}{{.Params.coverimage}}' loading="lazy" alt="{{.Title}}"/>
+                {{ $coverImage := .Resources.GetMatch .Params.coverimage }}
+                <img src='{{ ($coverImage.Resize "x520").Permalink }}' loading="lazy" alt="{{.Title}}"/>
               </div>
               <hr />
               {{.Content}}
