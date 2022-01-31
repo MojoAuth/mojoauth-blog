@@ -30,13 +30,20 @@
   />
 </head>
   <body>
+    <script>
+      function removeClass() {
+
+          document.getElementById( "products" ).checked ? document.getElementById( "products" ).checked = false : null
+
+        }
+    </script>
     <!--main section-->
     <div class="main">
       <!--header section-->
       {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
       <!--header section-->
       <!--content section-->
-      <main class="content detail-page-v1">
+      <main onclick="removeClass()"class="content detail-page-v1">
         <section class="py-72 description">
           <div class="grid-70-30">
             <div class="middle text detail-page-header">
