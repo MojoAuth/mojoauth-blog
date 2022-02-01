@@ -60,3 +60,10 @@
     </div>
   </section>
 </footer>
+<script>
+  window.addEventListener('click', function(e){
+    if (!document.getElementById('products-dropdown').contains(e.target)){
+      document.getElementById( "products" ).checked ? document.getElementById( "products" ).checked = false : null
+    }
+  });
+</script>

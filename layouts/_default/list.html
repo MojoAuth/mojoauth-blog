@@ -22,13 +22,6 @@
     {{ partial "gtag" .}}
   </head>
   <body>
-    <script>
-      function removeClass() {
-
-          document.getElementById( "products" ).checked ? document.getElementById( "products" ).checked = false : null
-
-        }
-    </script>
     <!--main section-->
     <div class="main">
      {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
