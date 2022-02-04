@@ -9,6 +9,7 @@
       padding: 0;
     }
     .footer-top {
+      font-size: 17px;
       & > div {
         position: relative;
         &:before {
@@ -67,9 +68,7 @@
         color: $coolGray-100;
         font-weight: 500;
         margin-bottom: 24px;
-        & ~ h4 {
-          margin-top: 48px;
-        }
+        margin-top: 0;
         @media (max-width: 1023px) {
           margin-top: 48px;
         }
