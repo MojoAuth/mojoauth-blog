@@ -109,7 +109,7 @@
   <section class="footer-bottom">
     <div class="w-100">
       <div class="copyright">
-        <p>Copyright 2021, MojoAuth</p>
+        <p id='auto-copyright'></p>
       </div>
 
       <div class="link">
@@ -136,4 +136,9 @@
       document.getElementById( "products" ).checked ? document.getElementById( "products" ).checked = false : null
     }
   });
+</script>
+<script type='text/javascript'>
+  var parElement = document.getElementById( "auto-copyright" );
+  var textToAdd = document.createTextNode( `Copyright ${ new Date().getFullYear() }, MojoAuth` );
+  parElement.appendChild( textToAdd );
 </script>
