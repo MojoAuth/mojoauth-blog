@@ -1,7 +1,7 @@
 ---
 title: "Sending Email With SMTP In Golang"
 date: 2022-02-07T10:10:10+05:30
-coverImage: "sending_email_with_smtp_in_golang.png"
+coverImage: "sending_email_with_smtp_in_golang.jpg"
 author: "Ashish Sharma"
 tags: ["Tutorial"]
 description: "Learn how to send emails with smtp using golang"
