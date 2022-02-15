@@ -9,13 +9,13 @@ description: "In this article, we will explore different hashing functions used 
 
 We must not save users' passwords in the database's plain text in any application as it poses a severe security threat. We should always save a password in the hashed format. But not all hashing functions are suitable to store passwords. Popular hashing functions like sha1 and md5 are not good for passwords.
 
-We will learn how to hash a password in NodeJs using better-suited functions such as  `Bcrypt`, `PBKDF2`, and `Argon2`.
+We will learn how to hash a password in NodeJs using better-suited functions such as `Bcrypt`, `PBKDF2`, and `Argon2`.
 
 Pre-requisites:
- - Basic understanding of HTML/JavaScript
- - NodeJs  installed in your system.
- - Access to a test MongoDB Database.
 
+- Basic understanding of HTML/JavaScript
+- NodeJs installed in your system.
+- Access to a test MongoDB Database.
 
 ## Password hashing using Bcrypt
 
@@ -66,7 +66,6 @@ app.listen(PORT, function (err) {
 
 Then we will create a User Model to save the user data in the database. This User.js file will also contain two methods, `createHash` and `validatePassword`, which will contain the logic to generate password hash and validate it.
 
-
 ```JS
 /* models/User.js */
 const mongoose = require("mongoose");
@@ -95,7 +94,7 @@ UserSchema.methods.createHash = async function (plainTextPassword) {
   // Hashing user's salt and password with 10 iterations,
   const saltRounds = 10;
 
-  // First method to generate a salt and then create hash 
+  // First method to generate a salt and then create hash
   const salt = await bcrypt.genSalt(saltRounds);
   return await bcrypt.hash(plainTextPassword, salt);
 
@@ -112,6 +111,7 @@ UserSchema.methods.validatePassword = async function (candidatePassword) {
 module.exports.User = mongoose.model("User", UserSchema);
 
 ```
+
 In `controllers/users.js` we will define two routes `/users/signup` and `/users/signin`.
 
 ```JS
@@ -134,7 +134,7 @@ router.post(
       name: req.body.name,
       email: req.body.email
     });
-    
+
     var hashedPassword = await newUser.createHash(req.body.password);
     newUser.password_hash = hashedPassword;
 
@@ -174,6 +174,7 @@ router.post(
 module.exports = router;
 
 ```
+
 > Note: Above code is not production-ready and is only used to explain the password hashing functions syntax.
 
 Once we are done with the above code, we need to install all the dependencies using npm and run the nodejs server using the below command.
@@ -192,12 +193,14 @@ Once the server is running on our local machines, we can create a new user by su
   "password": "choosestrongpassword"
 }
 ```
+
 ```json
 // Response of signup API
 {
   "message": "User successfully registered."
 }
 ```
+
 After creating the user, we can try the signin API - `http://localhost:3000/users/signin` and get the below response if we use the correct password.
 
 ```json
@@ -208,16 +211,16 @@ After creating the user, we can try the signin API - `http://localhost:3000/user
 }
 ```
 
-
 ```json
 // Response of signin API
 {
-    "message": "User Successfully Logged In."
+  "message": "User Successfully Logged In."
 }
 ```
-## Password hashing in NodeJs using PBKDF2 
 
-Password-Based Key Derivation Function 2 (PBKDF2) uses graphics processing units (GPUs) computation while creating the hash, it makes the [brute-force attack](https://en.wikipedia.org/wiki/Brute-force_attack) costly. 
+## Password hashing in NodeJs using PBKDF2
+
+Password-Based Key Derivation Function 2 (PBKDF2) uses graphics processing units (GPUs) computation while creating the hash, it makes the [brute-force attack](https://en.wikipedia.org/wiki/Brute-force_attack) costly.
 
 And we will also use a dynamic salt which will save our passwords from [Rainbow table attack](https://en.wikipedia.org/wiki/Rainbow_table)
 
@@ -263,13 +266,15 @@ UserSchema.methods.validatePassword = async function (candidatePassword) {
 
 module.exports.User = mongoose.model("User", UserSchema);
 ```
+
 ## Password hashing in NodeJs using Argon2
 
-Argon2 is the newest hashing algorithm out of the mentioned three. It emerged as the winner of the [Password Hashing Competition](https://en.wikipedia.org/wiki/Password_Hashing_Competition) in 2015. 
+Argon2 is the newest hashing algorithm out of the mentioned three. It emerged as the winner of the [Password Hashing Competition](https://en.wikipedia.org/wiki/Password_Hashing_Competition) in 2015.
 
 It is the recommended first choice for passwords by [The Open Web Application Security Project](https://owasp.deteact.com/cheat/cheatsheets/Password_Storage_Cheat_Sheet.html) after that PBKDF2 and Bcrypt are the following choices.
 
 We use the `argon2` npm package to create a password hash and validate it in the code below.
+
 ```JS
 /* models/Users.js */
 ...
@@ -294,6 +299,6 @@ module.exports.User = mongoose.model("User", UserSchema);
 
 # Conclusion
 
-As per the [verizon Data Breach Investigations Report](https://www.verizon.com/business/resources/reports/dbir/), passwords are responsible for 81% of the data breaches. A strong hashing algorithm is recommended to save the passwords in the database. It can save you from a lot of trouble. 
+As per the [verizon Data Breach Investigations Report](https://www.verizon.com/business/resources/reports/dbir/), passwords are responsible for 81% of the data breaches. A strong hashing algorithm is recommended to save the passwords in the database. It can save you from a lot of trouble.
 
-We at MojoAauth want to take application security one more step ahead. That's why we provide [Passwordless Authentication](https://mojoauth.com/blog/passwordless-is-future/) Solution.
+We at MojoAauth want to take application security one more step ahead. Give a try to our [Passwordless Authentication](https://mojoauth.com/blog/passwordless-is-future/) solution which provide a secure and hassle free authentication experience to your customer.
