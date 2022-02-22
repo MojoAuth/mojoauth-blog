@@ -1,7 +1,7 @@
 ---
 title: "Best practices for JWT tokens"
 date: 2022-02-21T14:41:23+05:30
-coverImage: "frontend-backend.png"
+coverImage: "best-practices-for-jwt-tokens.jpg"
 author: "Mehul Sharma"
 tags: ["Article"]
 description: "Learn about the best practices of JWTs for better security of your application ."
