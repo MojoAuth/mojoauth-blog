@@ -11,7 +11,7 @@ description: "Learn about the best practices of JWTs for better security of your
 
 JWTs are the latest technology used for securely transmitting information between backend and frontend as JSON objects. While using a React app or any other SPA or SSR apps for your frontend, there's a high chance that your data setup looks like this.
 
-![Frontend Backend](../assets/images/frontend-backend.png)
+![Frontend Backend](../assets/images/best-practices-for-jwt-tokens/frontend-backend.png)
 
 And as you may know, this data setup requires a way of securing your calls from the malicious hackers who can steal your data. One of the best ways to do that is using JWTs.
 
