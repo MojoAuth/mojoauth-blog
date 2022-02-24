@@ -2,7 +2,7 @@ header.header {
   min-height: 100px;
   border-bottom: 1px solid #e8e9ea;
   -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.06);
   z-index: 3;
   position: relative;
   background: #ffffff;
@@ -18,8 +18,8 @@ header.header nav {
 @media (max-width: 767px) {
   header.header nav {
     -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
   }
 }
 
@@ -34,19 +34,19 @@ header.header nav .nav-right {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (max-width: 767px) {
   header.header nav .nav-right {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 }
 
@@ -63,8 +63,8 @@ header.header nav ul {
   header.header nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -75,8 +75,8 @@ header.header nav ul li a:not(.btn) {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 100px;
   color: #202124;
 }
@@ -159,11 +159,11 @@ header.header .logo-mobile {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     min-height: 100px;
     z-index: 2;
     background: #fff;
@@ -213,10 +213,14 @@ header #navcheck ~ .nav-btn label span {
   margin-bottom: 6px;
   background: #202124;
   border-radius: 2px;
-  -webkit-transition: background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.3s ease-in-out, -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.3s ease-in-out, -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.3s ease-in-out;
-  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.3s ease-in-out, -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+  -webkit-transition: background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.3s ease-in-out,
+    -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.3s ease-in-out,
+    -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.3s ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.3s ease-in-out, -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
   position: relative;
 }
 
@@ -227,7 +231,7 @@ header #navcheck ~ .nav-btn label span:last-child {
 @media (max-width: 767px) {
   header #navcheck:checked ~ .nav-btn label span:first-child {
     -webkit-transform: rotate(45deg) translate(3px, 3px);
-            transform: rotate(45deg) translate(3px, 3px);
+    transform: rotate(45deg) translate(3px, 3px);
     top: 0;
     left: 0;
   }
@@ -236,7 +240,7 @@ header #navcheck ~ .nav-btn label span:last-child {
   }
   header #navcheck:checked ~ .nav-btn label span:last-child {
     -webkit-transform: rotate(-45deg) translate(9px, -9px);
-            transform: rotate(-45deg) translate(9px, -9px);
+    transform: rotate(-45deg) translate(9px, -9px);
     top: 0;
     left: 0;
   }
@@ -247,7 +251,7 @@ header #navcheck ~ .nav-btn label span:last-child {
     width: 100%;
     padding-bottom: 32px;
     -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06), 0 6px 6px rgba(0, 0, 0, 0.06), 0 6px 8px rgba(0, 0, 0, 0.09);
-            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06), 0 6px 6px rgba(0, 0, 0, 0.06), 0 6px 8px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06), 0 6px 6px rgba(0, 0, 0, 0.06), 0 6px 8px rgba(0, 0, 0, 0.09);
     border-top: 1px solid #dadce0;
   }
   header #navcheck:checked ~ .backdrop {
@@ -289,8 +293,8 @@ header #navcheck ~ .nav-btn label span:last-child {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 100px;
   color: #202124;
 }
@@ -301,11 +305,11 @@ header #navcheck ~ .nav-btn label span:last-child {
     min-height: 72px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     padding: 24px 0;
   }
 }
@@ -314,8 +318,8 @@ header #navcheck ~ .nav-btn label span:last-child {
   cursor: pointer;
   white-space: nowrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 48px 0 24px;
   font-size: 16px;
   font-weight: 500;
@@ -373,7 +377,7 @@ header #navcheck ~ .nav-btn label span:last-child {
   top: 80px;
   background-color: #ffffff;
   -webkit-box-shadow: rgba(35, 31, 32, 0.2) 0px 0px 20px;
-          box-shadow: rgba(35, 31, 32, 0.2) 0px 0px 20px;
+  box-shadow: rgba(35, 31, 32, 0.2) 0px 0px 20px;
   padding: 16px;
   width: 200px;
   border-radius: 8px;
@@ -382,7 +386,7 @@ header #navcheck ~ .nav-btn label span:last-child {
 @media (max-width: 992px) {
   .dd-menu {
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     border-radius: 0;
     width: 100%;
     position: relative;
@@ -415,16 +419,16 @@ header #navcheck ~ .nav-btn label span:last-child {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (max-width: 992px) {
   .footer section > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -477,16 +481,16 @@ header #navcheck ~ .nav-btn label span:last-child {
 @media (max-width: 992px) {
   .footer section > div ul.social-links {
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
   }
 }
 
 @media (max-width: 992px) {
   .footer section > div .link {
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
     padding: 26px 0;
   }
 }
@@ -495,11 +499,11 @@ header #navcheck ~ .nav-btn label span:last-child {
   .footer section > div .link {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -545,8 +549,8 @@ header #navcheck ~ .nav-btn label span:last-child {
 @media (max-width: 992px) {
   .footer p {
     -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    -ms-flex-order: 3;
+    order: 3;
     text-align: center;
   }
 }
@@ -569,15 +573,16 @@ header #navcheck ~ .nav-btn label span:last-child {
   line-height: 1;
   border-radius: 0.25rem;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 500;
   text-align: center;
   -webkit-appearance: none;
   -webkit-transition: color 0.35s, background-color 0.35s, border-color 0.35s, opacity 0.35s, -webkit-box-shadow 0.35s;
   transition: color 0.35s, background-color 0.35s, border-color 0.35s, opacity 0.35s, -webkit-box-shadow 0.35s;
   transition: color 0.35s, background-color 0.35s, border-color 0.35s, box-shadow 0.35s, opacity 0.35s;
-  transition: color 0.35s, background-color 0.35s, border-color 0.35s, box-shadow 0.35s, opacity 0.35s, -webkit-box-shadow 0.35s;
+  transition: color 0.35s, background-color 0.35s, border-color 0.35s, box-shadow 0.35s, opacity 0.35s,
+    -webkit-box-shadow 0.35s;
   font-family: inherit;
   min-width: 120px;
   min-height: 52px;
@@ -590,8 +595,8 @@ header #navcheck ~ .nav-btn label span:last-child {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   border: 1px solid transparent;
@@ -621,7 +626,8 @@ header #navcheck ~ .nav-btn label span:last-child {
   color: #6929c4;
 }
 
-.btn.btn-secondary:hover, .btn.btn-secondary:focus {
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus {
   color: #7c3dd6;
   background-color: #efe6fa;
 }
@@ -644,7 +650,7 @@ header #navcheck ~ .nav-btn label span:last-child {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .grid-65-35 > div {
@@ -678,7 +684,7 @@ header #navcheck ~ .nav-btn label span:last-child {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .grid-70-30 > div {
@@ -712,7 +718,7 @@ header #navcheck ~ .nav-btn label span:last-child {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .grid-20-60-20 > div {
@@ -792,7 +798,7 @@ header #navcheck ~ .nav-btn label span:last-child {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .grid-25 > div {
@@ -812,7 +818,7 @@ header #navcheck ~ .nav-btn label span:last-child {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .grid-33 > div {
@@ -885,7 +891,7 @@ header #navcheck ~ .nav-btn label span:last-child {
 
 .card img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   max-height: 252px;
   min-height: 252px;
@@ -932,7 +938,7 @@ header #navcheck ~ .nav-btn label span:last-child {
   width: 100%;
   max-height: 450px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -1017,7 +1023,7 @@ header #navcheck ~ .nav-btn label span:last-child {
   width: 100%;
   max-height: 520px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -1138,8 +1144,8 @@ header #navcheck ~ .nav-btn label span:last-child {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: auto;
 }
 
@@ -1183,8 +1189,8 @@ header #navcheck ~ .nav-btn label span:last-child {
   .auther-detail {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -1218,7 +1224,7 @@ header #navcheck ~ .nav-btn label span:last-child {
 * {
   font-family: "Inter", sans-serif;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -1282,16 +1288,17 @@ p {
   line-height: 1.5;
 }
 
-header.header nav, .footer section > div {
+header.header nav,
+.footer section > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .border-muted {
@@ -1361,7 +1368,7 @@ section > div {
   width: 100%;
   max-height: 520px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   min-height: 520px;
 }
 
@@ -1377,14 +1384,14 @@ section > div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .tag {
   margin-bottom: 8px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .tag a {
@@ -1419,8 +1426,8 @@ section > div {
   display: flex;
   list-style: none;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -1444,11 +1451,11 @@ section > div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #5f6368;
   background-color: #ffffff;
   border-radius: 4px;
@@ -1463,20 +1470,24 @@ section > div {
   color: #ffffff;
 }
 
-.pagination li a.prew.enable, .pagination li a.next.enable {
+.pagination li a.prew.enable,
+.pagination li a.next.enable {
   background: #6929c4;
 }
 
-.pagination li a.prew.enable svg, .pagination li a.next.enable svg {
+.pagination li a.prew.enable svg,
+.pagination li a.next.enable svg {
   stroke: #ffffff;
 }
 
-.pagination li a.prew.disabled, .pagination li a.next.disabled {
+.pagination li a.prew.disabled,
+.pagination li a.next.disabled {
   color: #6929c4;
   background: #dadce0;
 }
 
-.pagination li a.prew.disabled svg, .pagination li a.next.disabled svg {
+.pagination li a.prew.disabled svg,
+.pagination li a.next.disabled svg {
   stroke: #6929c4;
 }
 
@@ -1544,11 +1555,11 @@ section > div {
 .author {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1566,8 +1577,8 @@ section > div {
 
 .author .about-author {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: 768px;
   margin: 0 auto;
   padding: 0 24px;

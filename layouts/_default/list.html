@@ -24,30 +24,42 @@
   <body>
     <!--main section-->
     <div class="main" id="main">
-     {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
+      {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
       <!--content section-->
-      <main onclick="removeClass()"class="content">
+      <main onclick="removeClass()" class="content">
         <!--hero pinned section-->
-        {{ range first 1 .Pages }}
-        {{ $coverImage := .Resources.GetMatch .Params.coverimage }}
+        {{ range first 1 .Pages }} {{ $coverImage := .Resources.GetMatch
+        .Params.coverimage }}
         <section class="hero pinned-item py-72">
           <div class="grid-65-35">
             <div class="hero-image border-radius-md">
               <a href="{{.Permalink}}">
-                <img src='{{ ($coverImage.Resize "x520").Permalink }}' loading="lazy" alt="{{.Title}}"/>
+                <img
+                  src='{{ ($coverImage.Resize "x520").Permalink }}'
+                  loading="lazy"
+                  alt="{{.Title}}"
+                />
               </a>
             </div>
             <div class="text">
               <div class="tag">
-                {{range .Params.tags}}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a> {{end}}
+                {{range .Params.tags}}<a
+                  href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'
+                  >{{ . }}</a
+                >
+                {{end}}
               </div>
               <h1 class="title">
                 <a href="{{.Permalink}}">{{.Title}}</a>
               </h1>
-              <p>
-                {{.Params.description}}
-              </p>
-              <div class="bio"> <a href='{{ "/author/" | relLangURL  }}{{ .Params.author | urlize }}'>{{.Params.author}}</a> - {{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+              <p>{{.Params.description}}</p>
+              <div class="bio">
+                <a
+                  href='{{ "/author/" | relLangURL  }}{{ .Params.author | urlize }}'
+                  >{{.Params.author}}</a
+                >
+                - {{ dateFormat "Monday, Jan 2, 2006" .Date }}
+              </div>
             </div>
           </div>
         </section>
@@ -56,27 +68,38 @@
         <!--blog listing-->
         <section class="blog-listing">
           <div class="grid-33">
-            {{ $paginator := .Paginate (where (after 1 .Data.Pages) "Type" "page") }}
-               {{ range $paginator.Pages }}
-               {{ $coverImage := .Resources.GetMatch .Params.coverimage }}
-               <div class="card border-radius-sm border-muted">
-                    <div class="image">
-                      <a href="{{.Permalink}}"><img src='{{ ($coverImage.Resize "x252").Permalink }}'  loading="lazy" alt="{{.Title}}"/></a>
-                    </div>
-                    <div class="description">
-                      <div class="tag">
-                         {{range .Params.tags}}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a> {{end}}
-                      </div>
-                      <a href="{{.Permalink}}"><h2 class="title">
-                        {{.Title}}
-                      </h2></a>
-                      <p>
-                        {{.Params.description}}
-                      </p>
-                      <div class="bio"> <a href='{{ "/author/" | relLangURL  }}{{ .Params.author | urlize }}'>{{ .Params.author }}</a> - {{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-                    </div>
-               </div>
-               {{ end }}
+            {{ $paginator := .Paginate (where (after 1 .Data.Pages) "Type"
+            "page") }} {{ range $paginator.Pages }} {{ $coverImage :=
+            .Resources.GetMatch .Params.coverimage }}
+            <div class="card border-radius-sm border-muted">
+              <div class="image">
+                <a href="{{.Permalink}}"
+                  ><img
+                    src='{{ ($coverImage.Resize "x252").Permalink }}'
+                    loading="lazy"
+                    alt="{{.Title}}"
+                /></a>
+              </div>
+              <div class="description">
+                <div class="tag">
+                  {{range .Params.tags}}<a
+                    href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'
+                    >{{ . }}</a
+                  >
+                  {{end}}
+                </div>
+                <a href="{{.Permalink}}"><h2 class="title">{{.Title}}</h2></a>
+                <p>{{.Params.description}}</p>
+                <div class="bio">
+                  <a
+                    href='{{ "/author/" | relLangURL  }}{{ .Params.author | urlize }}'
+                    >{{ .Params.author }}</a
+                  >
+                  - {{ dateFormat "Monday, Jan 2, 2006" .Date }}
+                </div>
+              </div>
+            </div>
+            {{ end }}
           </div>
         </section>
         <!--blog listing-->
@@ -89,12 +112,18 @@
               Right time to use passwordless for your Web, Mobile, TV, Wearable
               or any Smart and IoT Apps.
             </p>
-            <a href="https://mojoauth.com/signin" target="_blank" class="btn btn-primary">Signup for free</a>
+            <a
+              href="https://mojoauth.com/signin"
+              target="_blank"
+              class="btn btn-primary"
+              >Signup for free</a
+            >
           </div>
         </section>
         <!--CTA section-->
       </main>
       {{ partial "footer" . }}
+      <div class="backdrop">&nbsp;</div>
     </div>
     <!--main section-->
     {{ partial "gtagfooter" .}}
