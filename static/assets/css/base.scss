@@ -1,4 +1,4 @@
-@import "variable", "header",  "button", "grid", "card", "detail-page", "footer";
+@import "variable", "header", "button", "grid", "card", "detail-page", "footer";
 * {
   font-family: $font-stack;
   box-sizing: border-box;
@@ -44,6 +44,23 @@ h2 {
     line-height: 30px;
   }
 }
+%d-flex {
+  display: flex;
+}
+%space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%align-center {
+  display: flex;
+  align-items: center;
+}
+%d-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 p {
   margin-top: 0;
   line-height: 1.5;
@@ -79,6 +96,9 @@ section {
       padding: 0 16px;
     }
   }
+}
+.w-100 {
+  width: 100%;
 }
 .py-72 {
   padding: $p72 0;
@@ -121,7 +141,7 @@ section {
 .tag {
   margin-bottom: 8px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   a {
     color: $primary;
     letter-spacing: 1.5px;
@@ -274,4 +294,8 @@ section {
       }
     }
   }
+}
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
