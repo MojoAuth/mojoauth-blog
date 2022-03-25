@@ -378,8 +378,8 @@
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.1812 1.3938L8.39371 8.18124L1.60627 1.3938' stroke='%23121619' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: center right;
-  background-size: 16px 9px;
-  width: 16px;
+  background-size: 14px 7px;
+  width: 14px;
   height: 9px;
   right: 16px;
   @media (max-width: 992px) {
@@ -406,7 +406,7 @@
   background-color: $white;
   box-shadow: rgba(35, 31, 32, 0.2) 0px 0px 20px;
   padding: 0;
-  width: 256px;
+  width: 280px;
   border-radius: 8px;
   @media (max-width: 992px) {
     box-shadow: none;
