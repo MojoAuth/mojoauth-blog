@@ -8,7 +8,7 @@ description: "Learn how to setup a Netlify Centralized Authentication using Mojo
 ---
  
 
-In this blog you will learn about netlify centralized authentication using mojoauth with a working Demonstration. 
+In this blog you will learn about netlify centralized authentication using MojoAuth with a working Demonstration. 
 
 
 # Getting Credentials
@@ -46,7 +46,7 @@ Now, On the Login page of your website, Add a login Button. Link it to the Netli
 
 ## Profile page
 
-On the profile page, Add the mojoauth JavaScript SDK in the head of your html and follow the mentioned steps-
+On the profile page, Add the MojoAuth JavaScript SDK in the head of your html and follow the mentioned steps-
 
 ```js
 <script
@@ -56,7 +56,7 @@ On the profile page, Add the mojoauth JavaScript SDK in the head of your html an
 ```
 OR 
 
-Install mojoauth npm package using **`npm install mojoauth-web-sdk`** and import it into your frontend framework. 
+Install MojoAuth npm package using **`npm install mojoauth-web-sdk`** and import it into your frontend framework. 
 
 ```js
 import MojoAuth from 'mojoauth-web-sdk'
@@ -79,7 +79,7 @@ mojoauth.signInWithStateID().then( response => { console.log(response)})
 
 # Netlify Authentication 
 
-Create your own netlify authentication page using mojoauth for your Login using plain html and js or any of the frontend frameworks like ReactJS and NextJS.
+Create your own netlify authentication page using MojoAuth for your Login using plain html and js or any of the frontend frameworks like ReactJS and NextJS.
 
 On this netlify Authentication page, add MojoAuth javascript SDK in the head and follow the mentioned steps:
 ```js
@@ -90,7 +90,7 @@ On this netlify Authentication page, add MojoAuth javascript SDK in the head and
 ```
 OR
 
-Install mojoauth npm package using **`npm install mojoauth-web-sdk`** and import it into your frontend framework. 
+Install MojoAuth npm package using **`npm install mojoauth-web-sdk`** and import it into your frontend framework. 
 
 ```js
 import MojoAuth from 'mojoauth-web-sdk'
@@ -137,7 +137,7 @@ mojoauth.signIn().then(response => window.close())
 
 3. In the netlify Auth directory, add your APIKEY in config.js file. Alternatively, add it as an environment variable in netlify.
 
-4. In the website template directory, add APIKEY, REDIRECT_URL and MOJOAUTH_NETLIFY_URL which would be your netlify url for mojoauth authentication in the config.js file. Alternatively add them as environment variables in netlify. 
+4. In the website template directory, add APIKEY, REDIRECT_URL and MOJOAUTH_NETLIFY_URL which would be your netlify url for MojoAuth authentication in the config.js file. Alternatively add them as environment variables in netlify. 
 
 5. Set up your website and host them on netlify. Your netlify centralized authentication is now live.
 
