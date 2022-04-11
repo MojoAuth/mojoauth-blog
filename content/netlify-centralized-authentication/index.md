@@ -40,7 +40,7 @@ Create your website frontend using HTML and js or any of the frontend frameworks
 
 Now, On the Login page of your website, add a login button. Link it to the Netlify Authentication link with the redirect Url as a query parameter. The redirect URL would be the profile/protected page of your website. 
 
-**Check our [Demo](https://netlify-centric-authentication-demo.netlify.app) for more details on how to set up the login button.**
+**Check our [Demo](https://netlify-centric-auth-demo.netlify.app) for more details on how to set up the login button.**
 
 
 
