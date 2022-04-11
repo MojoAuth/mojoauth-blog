@@ -141,7 +141,7 @@ mojoauth.signIn().then(response => window.close())
 
 5. Set up your website and host them on netlify. Your netlify centralized authentication is now live.
 
-**Visit [netlify-centric-authentication-demo.netlify.app](https://netlify-centric-authentication-demo.netlify.app) for a working demo.**
+**Visit [netlify-centric-auth-demo.netlify.app](https://netlify-centric-auth-demo.netlify.app) for a working demo.**
 
 **Note:-** In the Demo repository, create react app has been used for both netlify auth and website template. You can use the frontend of your choice. Alternatively, you can also use plain HTML and js to set up your frontend. Learn more about HTML and JS setup on [MojoAuth Docs](https://mojoauth.com/docs/guides/html-and-js). 
 
