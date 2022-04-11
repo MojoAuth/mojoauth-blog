@@ -1,6 +1,6 @@
 ---
 title: "Netlify Centralized Authentication using MojoAuth "
-date: 2022-04-10T14:41:23+05:30
+date: 2022-04-11T14:41:23+05:30
 coverImage: "netlify-centralized-authentication.jpg"
 author: "Mehul Sharma"
 tags: ["MojoAuth"]
@@ -143,6 +143,6 @@ mojoauth.signIn().then(response => window.close())
 
 **Visit [netlify-centric-authentication-demo.netlify.app](https://netlify-centric-authentication-demo.netlify.app) for a working demo.**
 
-- In the Demo repository, create react app has been used for both netlify auth and website template. You can use the frontend of your choice. Alternatively you can also use plain html and js to set up your frontend. Learn more about html and JS setup on [MojoAuth Docs](https://mojoauth.com/docs/guides/html-and-js). 
+**Note:-** In the Demo repository, create react app has been used for both netlify auth and website template. You can use the frontend of your choice. Alternatively you can also use plain html and js to set up your frontend. Learn more about html and JS setup on [MojoAuth Docs](https://mojoauth.com/docs/guides/html-and-js). 
 
 
