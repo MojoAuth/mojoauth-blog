@@ -3,7 +3,7 @@ title: "Netlify Centralized Authentication using MojoAuth "
 date: 2022-04-11T14:41:23+05:30
 coverImage: "netlify-centralized-authentication.jpg"
 author: "Mehul Sharma"
-tags: ["MojoAuth"]
+tags: ["Tutorial"]
 description: "Learn how to set up a Netlify Centralized Authentication using MojoAuth with a working demo."
 ---
  
