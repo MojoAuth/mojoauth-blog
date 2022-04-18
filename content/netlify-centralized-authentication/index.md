@@ -43,7 +43,6 @@ Now, On the Login page of your website, add a login button. Link it to the Netli
 **Check our [Demo](https://netlify-centric-auth-demo.netlify.app) for more details on how to set up the login button.**
 
 
-
 ## Profile page
 
 On the profile page, Add the MojoAuth JavaScript SDK in the head of your html and follow the mentioned steps-

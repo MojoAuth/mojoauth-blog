@@ -1,6 +1,6 @@
 ---
 title: "Best practices for one-time passwords"
-date: 2022-04-13T00:00:01+05:30
+date: 2022-04-18T00:00:01+05:30
 coverImage: "best-practices-for-otp-authentication.jpg"
 author: "Puneet Singh"
 tags: ["Article"]
