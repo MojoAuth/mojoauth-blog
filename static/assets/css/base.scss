@@ -8,6 +8,18 @@ body {
   padding: 0;
   color: $bodyText;
 }
+#main{
+  max-width: 1536px;
+    margin: 0 auto;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+  .hero {
+    margin-top: 85px;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -230,7 +242,7 @@ section {
       margin: 0 24px;
     }
     @media (max-width: 992px) {
-      margin: 0 16px;
+      margin: 0;
     }
     a {
       margin: 0 auto;
