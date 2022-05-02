@@ -3,13 +3,7 @@
     p {
       margin: 0;
     }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
     .footer-top {
-      font-size: 17px;
       & > div {
         position: relative;
         &:before {
@@ -22,13 +16,14 @@
           left: 24px;
         }
         padding-top: 72px;
-        margin-bottom: 48px;
-        .logo-footer {
+        margin-bottom: 72px;
+        .footer-logo {
           a {
             display: block;
             margin-bottom: 24px;
           }
           p {
+            font-size: 17px;
             margin-bottom: 24px;
             max-width: 90%;
             @media (max-width: 767px) {
@@ -45,15 +40,36 @@
             }
           }
         }
+        .footer-links {
+          display: flex;
+          flex-wrap: wrap;
+          & > div {
+            display: inline-block;
+            margin-right: 24px;
+            width: calc(50% - (24px * 1 / 2));
+            margin-bottom: 24px;
+            &:last-child {
+              margin-right: 0;
+            }
+            @media (max-width: 767px) {
+              margin: 0;
+              width: 100%;
+            }
+          }
+        }
       }
       .social-links {
         display: flex;
         a {
-          margin: 0 24px 0 0;
+          margin: 0 !important;
           display: block;
           color: $coolGray-70;
+          transition: 0.3s all ease-in-out;
           svg {
             vertical-align: middle;
+            path {
+              transition: 0.3s all ease-in-out;
+            }
           }
           &:hover {
             svg {
@@ -63,13 +79,21 @@
             }
           }
         }
+
+        li {
+          &:not(:last-child) {
+            margin: 0 24px 0 0 !important;
+          }
+        }
       }
       h4 {
         color: $coolGray-100;
         font-weight: 500;
         margin-bottom: 24px;
-        margin-top: 0;
-        @media (max-width: 1023px) {
+        & ~ h4 {
+          margin-top: 48px;
+        }
+        @media (max-width: 992px) {
           margin-top: 48px;
         }
       }
@@ -90,19 +114,20 @@
           }
           span {
             margin-left: 0.5rem;
-            background: $purple-70;
+            background: $yellow;
             border-radius: 0.25rem;
             padding: 0.2rem 0.5rem;
             font-weight: 500;
             font-size: 0.55rem;
-            line-height: 1;
-            color: $white;
+            color: $coolGray-100;
             text-transform: uppercase;
-          }
-        }
-        & ~ ul {
-          @media (max-width: 1024px) {
-            margin-bottom: 68px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            &.primary{
+              background: $purple-70;
+              color: $white;
+            }
           }
         }
       }
@@ -136,9 +161,9 @@
 
       .link {
         ul {
-          display: flex;
+          @extend %d-flex;
           li {
-            display: flex;
+            @extend %d-flex;
             &:not(:last-child) {
               margin-right: 12px;
               padding-right: 12px;
@@ -146,6 +171,7 @@
             }
             a {
               color: $coolGray-70;
+              font-weight: normal;
               &:hover {
                 color: $purple-70-hover;
               }
