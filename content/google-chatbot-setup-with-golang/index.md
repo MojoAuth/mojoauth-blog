@@ -8,9 +8,6 @@ description: "Learn how to setup a google chatbot asynchronously in golang with 
 ---
 
 
-
-# Google chatbot setup with Golang
-
 This tutorial will cover building a bot that responds to pings (i.e., @) and sends messages to a chat room. The bot will run on a golang server and receive pings via an HTTP endpoint on a high level. 
 
 We will be using payload in the HTTP request for responses to pings(synchronous), while Google Hangout Chat API will be used for bot-initiated messages(asynchronous)
