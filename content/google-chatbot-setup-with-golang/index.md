@@ -7,15 +7,17 @@ tags: ["Tutorial"]
 description: "Learn how to setup a google chatbot asynchronously in golang with cards UI that posts messages to your G Suite Room."
 ---
 
+
+
 # Google chatbot setup with Golang
 
-This tutorial will cover how to build a bot that responds to pings (i.e., @) and sends messages to a chat room. The bot will run on a golang server and receive pings via an HTTP endpoint on a high level. 
+This tutorial will cover building a bot that responds to pings (i.e., @) and sends messages to a chat room. The bot will run on a golang server and receive pings via an HTTP endpoint on a high level. 
 
 We will be using payload in the HTTP request for responses to pings(synchronous), while Google Hangout Chat API will be used for bot-initiated messages(asynchronous)
 
 ## Google Chatbots 
 
-When you think about a bot, you need to decide how you want to interact with it.
+When you think about a bot, you must decide how you want to interact with it.
 
 - Synchronously — Question and Answer (easy)
 
@@ -23,7 +25,7 @@ When you think about a bot, you need to decide how you want to interact with it.
 
 ## Synchronous Bots
 
-This is a simple task where you ping a bot, and the bot replies back. We won’t even need the complicated functions of the Google Chat API.  This means you can make a bot in a few lines of code that respond to HTTP POST requests.
+The simple task is to ping a bot, and the bot replies. It means you can make a bot in a few lines of code that respond to HTTP POST requests. We won't even need the complicated functions of the Google Chat API.
 
 ```go
 package main
@@ -35,7 +37,7 @@ import (
 chat "google.golang.org/api/chat/v1"
 )
 func main() {
-f := func(w http.ResponseWriter, r *http.Request) {
+handler := func(w http.ResponseWriter, r *http.Request) {
    if r.Method != http.MethodPost {
      w.WriteHeader(http.StatusMethodNotAllowed)
      Return
@@ -56,13 +58,13 @@ f := func(w http.ResponseWriter, r *http.Request) {
      fmt.Fprintf(w, `{"text":"you said %s"}`, event.Message.Text)
    }
  }
- log.Fatal(http.ListenAndServe(":8080", http.HandlerFunc(f)))
+ log.Fatal(http.ListenAndServe(":8080", http.HandlerFunc(handler)))
 }
 ```
 
 You can deploy your app with your preferred method and access it as an API. 
 
-Testing the functionality of the above written code- 
+Testing the functionality of the above-written code- 
 
 ```c
 curl 'http:localhost:8080/' \
@@ -72,70 +74,70 @@ curl 'http:localhost:8080/' \
 
 ## Asynchronous Bots
 
-Asynchronous interaction is where the actual functionality of the Google Chat API comes in. You now have to figure out [service accounts](https://developers.google.com/chat/api/guides/auth/service-accounts). 
+Asynchronous interaction is where the actual functionality of the Google Chat API comes in. Here, the main task is to figure out [service accounts](https://developers.google.com/chat/api/guides/auth/service-accounts). 
 
 ```go
 package main
 
 import (
-	"context"
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"log"
-	"net/http"
+    "context"
+    "encoding/json"
+    "fmt"
+    "io/ioutil"
+    "log"
+    "net/http"
 
-	"golang.org/x/oauth2"
-	"golang.org/x/oauth2/google"
-	chat "google.golang.org/api/chat/v1"
+    "golang.org/x/oauth2"
+    "golang.org/x/oauth2/google"
+    chat "google.golang.org/api/chat/v1"
 )
 
 func getGoogleChatOauthClient(serviceAccountKeyPath string) *http.Client {
-	ctx := context.Background()
-	data, err := ioutil.ReadFile(serviceAccountKeyPath)
-	if err != nil {
-		log.Fatal(err)
-	}
-	creds, err := google.CredentialsFromJSON(
-		ctx,
-		data,
-		"https://www.googleapis.com/auth/chat.bot",
-	)
-	if err != nil {
-		log.Fatal(err)
-	}
+    ctx := context.Background()
+    data, err := ioutil.ReadFile(serviceAccountKeyPath)
+    if err != nil {
+        log.Fatal(err)
+    }
+    creds, err := google.CredentialsFromJSON(
+        ctx,
+        data,
+        "https://www.googleapis.com/auth/chat.bot",
+    )
+    if err != nil {
+        log.Fatal(err)
+    }
 
-	return oauth2.NewClient(ctx, creds.TokenSource)
+    return oauth2.NewClient(ctx, creds.TokenSource)
 }
 
 func GoogleNotification(data map[string]string) error {
 
-	// Setup client to write messages to chat.google.com
-	client := getGoogleChatOauthClient("YOURKEYSPATH")
-	service, err := chat.New(client)
-	if err != nil {
-		return err
-	}
+    // Setup client to write messages to chat.google.com
+    client := getGoogleChatOauthClient("YOURKEYSPATH")
+    service, err := chat.New(client)
+    if err != nil {
+        return err
+    }
 
-	msgService := chat.NewSpacesMessagesService(service)
+    msgService := chat.NewSpacesMessagesService(service)
 
-	msg := ChatCard("Title", "Subtitle", data)
-	_, err = msgService.Create("spaces/YOUR_ROOM_ID", msg).Do()
-	if err != nil {
-		return err
-	}
+    msg := ChatCard("Title", "Subtitle", data)
+    _, err = msgService.Create("spaces/YOUR_ROOM_ID", msg).Do()
+    if err != nil {
+        return err
+    }
 
-	return nil
+    return nil
 }
 
 func ChatCard(title string, Subtitle string, data map[string]string) *chat.Message {
 
-	var widgets []*chat.WidgetMarkup
-	for key, value := range data {
-		widgets = append(widgets, &chat.WidgetMarkup{KeyValue: &chat.KeyValue{TopLabel: key, Content: value}})
-	}
+    var widgets []*chat.WidgetMarkup
+    for key, value := range data {
+        widgets = append(widgets, &chat.WidgetMarkup{KeyValue: &chat.KeyValue{TopLabel: key, Content: value}})
+    }
 
-	cards := `{
+    cards := `{
        "cards": [
            {
                "header": {
@@ -150,16 +152,16 @@ func ChatCard(title string, Subtitle string, data map[string]string) *chat.Messa
            }
        ]
    }`
-	outputString := fmt.Sprintf(cards, title, Subtitle)
-	var message chat.Message
-	json.Unmarshal([]byte(outputString), &message)
+    outputString := fmt.Sprintf(cards, title, Subtitle)
+    var message chat.Message
+    json.Unmarshal([]byte(outputString), &message)
 
-	message.Cards[0].Sections[0].Widgets = widgets
-	return &message
+    message.Cards[0].Sections[0].Widgets = widgets
+    return &message
 }
 
 func main(){
-   f := func(w http.ResponseWriter, r *http.Request) {
+   handler := func(w http.ResponseWriter, r *http.Request) {
        if r.Method != http.MethodPost {
             w.WriteHeader(http.StatusMethodNotAllowed)
             Return
@@ -170,15 +172,17 @@ func main(){
 
    }
    
-   log.Fatal(http.ListenAndServe(":8080", http.HandlerFunc(f)))
+   log.Fatal(http.ListenAndServe(":8080", http.HandlerFunc(handler)))
 }
 ```
 
-This way, you can call the custom function `GoogleNotification()` anywhere in your code with the described parameters title, subtitle and data which you want to display in the room. Else, you can make your bot ping to your G Suite room on an api call with your preferred data.
+This way, you can call the custom function `GoogleNotification()` anywhere in your code with the described parameters- title, subtitle, and data that you want to display in the room. Else, you can make your bot ping to your G Suite room on an API call with your preferred data.
 
 ## Configuring Service Accounts
 
-Login to the [developer console](https://console.developers.google.com). Create a new project, and enable Hangout Chat API. Under configuration, set:
+Login to the [developer console](https://console.developers.google.com). 
+
+Create a new project and enable the Hangout Chat API. Under configuration, set:
 
 - status: live
 - bot name (this is how you will add and ping the bot)
@@ -188,17 +192,18 @@ Login to the [developer console](https://console.developers.google.com). Create 
 - connection settings - bot URL:
 - permission: everyone in your domain
 
-Restart your local server, and that’s it! Make sure you have your bot added to the chat room. 
+This basic setup will allow you to add your bot to your specific room. Now, restart your local server, and that's it!
 
 ## Use Cases
 
-There could be multiple implications where you can use synchoronous or asynchoronous bots( or both ) to get results. 
-It is upto your imagination to use the google chatbot which ever way you like. Some of the use cases are listed below-
+There could be multiple implications where you can use synchronous or asynchronous bots( or both ) to get the desired results. 
 
-- Setup a question answer application on google hangouts built in golang (Synchoronous)
+It is up to your imagination to use the google chatbot whichever way you like. Some of the use cases are listed below-
 
-- Get the data from your application in your G Suite room using Google Chat API (Asynchoronous)
+- Setup a question-answer application on google hangouts built-in golang (Synchronous)
 
-- Setup a google bot (Synchoronous) to listen to pings sent by another bot in the room (Asynchoronous)
+- Get the data from your application in your G Suite room using Google Chat API (Asynchronous)
+
+- Setup a google bot (Synchronous) to listen to pings sent by another bot in the room (Asynchronous)
 
 
