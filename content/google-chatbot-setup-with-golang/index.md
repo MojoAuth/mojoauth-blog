@@ -16,9 +16,8 @@ We will be using payload in the HTTP request for responses to pings(synchronous)
 
 When you think about a bot, you must decide how you want to interact with it.
 
-- Synchronously — Question and Answer (easy)
-
-- Asynchronously — Bots pushing messages on their own (harder)
+- **Synchronously** — Question and Answer (easy)
+- **Asynchronously** — Bots pushing messages on their own (harder)
 
 ## Synchronous Bots
 
