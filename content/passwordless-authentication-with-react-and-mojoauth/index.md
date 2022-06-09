@@ -1,7 +1,6 @@
 ---
 title: "Passwordless Authentication with React and MojoAuth"
 date: 2022-06-07T14:41:23+05:30
-draft: "true"
 coverImage: "passwordless-authentication-with-react-and-mojoauth.png"
 author: "Mehul Sharma"
 tags: ["Tutorial"]
